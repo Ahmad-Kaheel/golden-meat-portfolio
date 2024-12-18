@@ -19,8 +19,12 @@ urlpatterns = [
 
     # Products Page
     path('products/', views.products, name='products'),
-
+    path('portfolio/', views.portfolio, name='portfolio'),
+    path('get_portfolio_items/<slug:category_slug>/', views.get_portfolio_items, name='get_portfolio_items'),
+    path('get_subcategories/<int:category_id>/', views.get_subcategories, name='get_subcategories'),
+    
     # Contact Us Dropdown Pages
     path('contact-us/sales/', views.sales, name='sales'),
     path('contact-us/info/', views.contact_info, name='contact-info'),
+    
 ]

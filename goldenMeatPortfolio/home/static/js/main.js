@@ -94,47 +94,27 @@
     return false;
   });
 
-  // Portfolio isotope and filter
+  // Porfolio isotope and filter
   $(window).on('load', function () {
     var portfolioIsotope = $('.portfolio-container').isotope({
       itemSelector: '.portfolio-item',
       layoutMode: 'fitRows'
     });
 
-    // Main category filters
-    $('#portfolio-filters li').on('click', function () {
-      $("#portfolio-filters li").removeClass('filter-active');
+    $('#portfolio-flters li').on('click', function () {
+      $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
 
-      // Apply the main category filter
-      const mainFilter = $(this).data('filter');
-      const activeSubFilter = $('#inner-filters li.filter-active').data('filter') || '*';
-
       portfolioIsotope.isotope({
-        filter: `${mainFilter}${activeSubFilter}`
+        filter: $(this).data('filter')
       });
     });
 
-    // Inner (subcategory) filters
-    $('#inner-filters li').on('click', function () {
-      $("#inner-filters li").removeClass('filter-active');
-      $(this).addClass('filter-active');
-
-      // Apply the inner filter in conjunction with the main category
-      const activeMainFilter = $('#portfolio-filters li.filter-active').data('filter') || '*';
-      const subFilter = $(this).data('filter');
-
-      portfolioIsotope.isotope({
-        filter: `${activeMainFilter}${subFilter}`
-      });
-    });
-
-    // Initiate venobox (lightbox feature used in portfolio)
+    // Initiate venobox (lightbox feature used in portofilo)
     $(document).ready(function () {
       $('.venobox').venobox();
     });
   });
-
 
   // Clients carousel (uses the Owl Carousel library)
   $(".clients-carousel").owlCarousel({

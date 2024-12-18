@@ -11,38 +11,6 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-#  Inner filter
---------------------------------------------------------------*/
-
-
-#inner-filters {
-  margin-top: 20px;
-  text-align: center;
-}
-
-#inner-filters ul {
-  list-style: none;
-  padding: 0;
-  display: inline-block;
-}
-
-#inner-filters ul li {
-  display: inline-block;
-  margin: 0 10px;
-  padding: 10px 15px;
-  cursor: pointer;
-  color: #444;
-  border: 1px solid transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-#inner-filters ul li.filter-active {
-  color: #fff;
-  background: #5cb874;
-  border: 1px solid #5cb874;
-}
-
-/*--------------------------------------------------------------
 #  Maze Timeline 
 --------------------------------------------------------------*/
 /* General Timeline Styling */
@@ -57,12 +25,6 @@
   gap: 150px;
 }
 
-#portfolio .container {
-  display: block;
-  /* Overrides the flex behavior */
-  gap: 0;
-  /* Reset gap if needed */
-}
 
 /* Timeline Row */
 .timeline-row {
@@ -1044,6 +1006,13 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.portfolio .container {
+  display: block;
+  /* Override the flex display */
+  gap: 0;
+  /* Remove gap if needed */
+}
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
