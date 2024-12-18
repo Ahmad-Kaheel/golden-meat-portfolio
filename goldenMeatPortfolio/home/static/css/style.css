@@ -1202,6 +1202,13 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
+#team .container {
+  display: block;
+  /* Change from flex to block */
+  gap: 0;
+  /* Optional: Reset the gap since it's a flex-specific property */
+}
+
 .team {
   background: #fff;
   padding: 60px 0;
