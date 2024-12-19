@@ -10,6 +10,385 @@
 #  My styles
 --------------------------------------------------------------*/
 
+
+/*--------------------------------------------------------------
+#  Vision, Mission and Values 
+--------------------------------------------------------------*/
+
+
+
+/* Card Container - Rounded Corners */
+.card-expandable {
+  position: relative;
+  /* To contain the arrow circle */
+  padding-bottom: 50px;
+  /* Space for the arrow circle */
+  border-radius: 15px;
+  /* Rounded corners */
+  border: 1px solid #ddd;
+  overflow: hidden;
+  /* Prevent content overflow during animation */
+  transition: box-shadow 0.3s ease;
+  /* Subtle hover effect */
+}
+
+.card-expandable:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  /* Add shadow on hover */
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddad52;
+  /* Card header color */
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 15px;
+  border-radius: 12px 12px 0 0;
+  /* Matches card's rounded corners */
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1rem;
+  border-radius: 0 0 12px 12px;
+  /* Matches card's rounded corners */
+}
+
+/* Arrow Circle */
+.toggle-details .arrow-circle {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #ddad52;
+  /* Updated color */
+  background-color: #fff;
+  border: 2px solid #ddad52;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+  /* Ensure it stays above card details */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Arrow Button */
+.toggle-details .arrow-circle:hover {
+  background-color: #ddad52;
+  /* Invert colors on hover */
+  color: #fff;
+  transform: scale(1.1);
+  /* Slightly enlarge on hover */
+}
+
+/* Card Details Animation */
+.card-details {
+  max-height: 0;
+  /* Start closed */
+  overflow: hidden;
+  /* Hide overflowing content */
+  padding: 0 15px;
+  /* Padding adjusts dynamically */
+  transition: max-height 0.8s ease, padding 0.5s ease;
+  /* Smooth open/close */
+}
+
+.card-expandable.active .card-details {
+  max-height: 200px;
+  /* Example expanded height */
+  padding: 15px;
+  /* Add padding for visible content */
+}
+
+/*--------------------------------------------------------------
+# Saudi Vision 2030
+--------------------------------------------------------------*/
+.key-pillars {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.key-pillars .section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.key-pillars .section-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.key-pillars .pillar {
+  margin-bottom: 40px;
+}
+
+.key-pillars .pillar img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.key-pillars .pillar h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.key-pillars .pillar p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.milestones {
+  padding: 50px 0;
+  background-color: #007bff;
+  color: white;
+}
+
+.milestones .milestone {
+  margin-bottom: 30px;
+}
+
+.milestones h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.milestones p {
+  font-size: 1rem;
+}
+
+
+/*--------------------------------------------------------------
+#  Sustainability
+--------------------------------------------------------------*/
+.sustainability-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.section-description {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sustainability-goal {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sustainability-goal img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.sustainability-goal h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sustainability-goal p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.call-to-action {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.call-to-action h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.call-to-action p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.call-to-action .btn {
+  color: #007bff;
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.call-to-action .btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+#  News section
+--------------------------------------------------------------*/
+
+#news .container {
+  display: block;
+  /* Change from flex to block */
+  gap: 0;
+  /* Optional: Reset the gap since it's a flex-specific property */
+}
+
+.news-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.news-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.news-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.news-content p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.news-content .read-more {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ddad52;
+  transition: color 0.3s ease;
+}
+
+.news-content .read-more:hover {
+  color: #ddad52;
+}
+
+
+/*--------------------------------------------------------------
+#  Photos section
+--------------------------------------------------------------*/
+.photos-section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.photos-section .section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  /* Add space between rows */
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.1);
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.photo-card:hover .photo-overlay {
+  opacity: 1;
+}
+
+.photo-text {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+}
+
 /*--------------------------------------------------------------
 #  Maze Timeline 
 --------------------------------------------------------------*/
@@ -1209,6 +1588,13 @@ section {
   /* Optional: Reset the gap since it's a flex-specific property */
 }
 
+#photos .container {
+  display: block;
+  /* Change from flex to block */
+  gap: 0;
+  /* Optional: Reset the gap since it's a flex-specific property */
+}
+
 .team {
   background: #fff;
   padding: 60px 0;
@@ -1282,7 +1668,7 @@ section {
 }
 
 .team .member:hover .member-info {
-  background: linear-gradient(0deg, rgba(78, 64, 57, 0.95) 0%, rgba(78, 64, 57, 0.95) 15%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(0deg, #4e4039f2 0%, rgba(78, 64, 57, 0.95) 15%, rgba(255, 255, 255, 0) 100%);
   opacity: 1;
   transition: 0.4s;
 }

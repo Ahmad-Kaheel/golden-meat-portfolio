@@ -141,3 +141,21 @@
   });
 
 })(jQuery);
+
+//Card open and close in Vission Mission and Values 
+document.querySelectorAll('.toggle-details').forEach(toggle => {
+  toggle.addEventListener('click', function () {
+    const card = this.closest('.card-expandable');
+    const arrow = this.querySelector('.arrow-circle');
+
+    card.classList.toggle('active');
+
+    if (card.classList.contains('active')) {
+      arrow.classList.remove('fa-chevron-down');
+      arrow.classList.add('fa-chevron-up');
+    } else {
+      arrow.classList.remove('fa-chevron-up');
+      arrow.classList.add('fa-chevron-down');
+    }
+  });
+});
