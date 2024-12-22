@@ -22,9 +22,10 @@ urlpatterns = [
     path('portfolio/', views.portfolio, name='portfolio'),
     path('get_portfolio_items/<slug:category_slug>/', views.get_portfolio_items, name='get_portfolio_items'),
     path('get_subcategories/<int:category_id>/', views.get_subcategories, name='get_subcategories'),
+    path('products_/', views.products, name='products_all'),
     
     # Contact Us Dropdown Pages
     path('contact-us/sales/', views.sales, name='sales'),
     path('contact-us/info/', views.contact_info, name='contact-info'),
-    
+    path('products/filter/', views.products_filter, name='products_filter'),
 ]

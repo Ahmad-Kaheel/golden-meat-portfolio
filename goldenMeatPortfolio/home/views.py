@@ -90,3 +90,6 @@ def sales(request):
 
 def contact_info(request):
     return render(request, 'home/contact_info.html')
+
+def products_filter(request):
+    return render(request, 'home/products_filter.html')
