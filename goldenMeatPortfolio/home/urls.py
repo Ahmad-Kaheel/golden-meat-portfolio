@@ -17,12 +17,17 @@ urlpatterns = [
     path('commitments/sustainability/', views.sustainability, name='sustainability'),
     path('commitments/saudi-vision/', views.saudi_vision, name='saudi-vision'),
 
-    # Products Page
-    path('products/', views.products, name='products'),
-    path('portfolio/', views.portfolio, name='portfolio'),
-    path('get_portfolio_items/<slug:category_slug>/', views.get_portfolio_items, name='get_portfolio_items'),
-    path('get_subcategories/<int:category_id>/', views.get_subcategories, name='get_subcategories'),
-    path('products_/', views.products, name='products_all'),
+    # Products Pages
+    path('meats/', views.meats, name='meats'),
+    path('dairy/', views.dairy, name='dairy'),
+    path('vegitable-fruits/', views.vegitablefruits, name='vegitable-fruits'),
+    path('oils/', views.oils, name='oils'),
+    path('others/', views.others, name='others'),
+
+    # path('portfolio/', views.portfolio, name='portfolio'),
+    # path('get_portfolio_items/<slug:category_slug>/', views.get_portfolio_items, name='get_portfolio_items'),
+    # path('get_subcategories/<int:category_id>/', views.get_subcategories, name='get_subcategories'),
+    # path('products_/', views.products, name='products_all'),
     
     # Contact Us Dropdown Pages
     path('contact-us/sales/', views.sales, name='sales'),

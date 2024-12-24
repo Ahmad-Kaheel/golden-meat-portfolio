@@ -11,6 +11,32 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+#  Products
+--------------------------------------------------------------*/
+
+#portfolio-flters1 a {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+  /* Adjust color as needed */
+}
+
+#portfolio-flters1 a .icon {
+  font-size: 24px;
+  /* Adjust size as needed */
+}
+
+#portfolio-flters1 a .text {
+  margin-top: 5px;
+  font-size: 14px;
+  /* Adjust font size as needed */
+}
+
+
+/*--------------------------------------------------------------
 #  Saudi Vision 2030 Page Styles
 --------------------------------------------------------------*/
 /* Saudi Vision Page Styles */
@@ -1690,6 +1716,10 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+#portfolio {
+  padding: 0 !important;
+}
+
 .portfolio .container {
   display: block;
   /* Override the flex display */
@@ -1702,6 +1732,13 @@ section {
 }
 
 .portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 0 0px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.portfolio #portfolio-flters1 {
   padding: 0;
   margin: 0 0 0px 0;
   list-style: none;
@@ -1721,12 +1758,34 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
+.portfolio #portfolio-flters1 a {
+  cursor: pointer;
+  margin: 0 15px 15px 0;
+  display: inline-block;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #212529;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #ddad52;
 }
 
+.portfolio #portfolio-flters1 a:hover,
+.portfolio #portfolio-flters1 a.filter-active {
+  color: #ddad52;
+}
+
 .portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio #portfolio-flters1 a:last-child {
   margin-right: 0;
 }
 

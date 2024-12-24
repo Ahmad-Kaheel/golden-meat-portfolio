@@ -71,18 +71,21 @@ def sustainability(request):
 def saudi_vision(request):
     return render(request, 'home/saudi_vision.html')
 
-# Products Page
-def products(request):
-    selected_slug = request.GET.get('category', None)
-    # Fetch only top-level categories and prefetch their subcategories
-    categories = Category.objects.filter(parent__isnull=True).prefetch_related('subcategories')
-    portfolio_items = PortfolioItem.objects.all()
+# Products Pages
+def meats(request):
+    return render(request, 'home/meats.html', )
 
-    return render(request, 'home/products.html', {
-        'categories': categories,
-        'portfolio_items': portfolio_items,
-        'selected_slug': selected_slug,
-    })
+def dairy(request):
+    return render(request, 'home/dairy.html', )
+
+def vegitablefruits(request):
+    return render(request, 'home/vegitable-fruits.html', )
+
+def oils(request):
+    return render(request, 'home/oils.html', )
+
+def others(request):
+    return render(request, 'home/others.html', )
 
 # Contact Us Pages
 def sales(request):
