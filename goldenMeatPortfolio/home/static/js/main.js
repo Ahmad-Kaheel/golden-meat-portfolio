@@ -159,3 +159,16 @@ document.querySelectorAll('.toggle-details').forEach(toggle => {
     }
   });
 });
+
+
+
+// slideshow
+document.addEventListener('DOMContentLoaded', function () {
+  const heroCarousel = document.querySelector('#heroCarousel');
+  const carousel = new bootstrap.Carousel(heroCarousel, {
+    interval: 5000, // Matches CSS transition timing
+    ride: 'carousel',
+    wrap: true,
+    pause: false
+  });
+});
