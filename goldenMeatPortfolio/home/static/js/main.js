@@ -165,10 +165,49 @@ document.querySelectorAll('.toggle-details').forEach(toggle => {
 // slideshow
 document.addEventListener('DOMContentLoaded', function () {
   const heroCarousel = document.querySelector('#heroCarousel');
-  const carousel = new bootstrap.Carousel(heroCarousel, {
-    interval: 5000, // Matches CSS transition timing
-    ride: 'carousel',
-    wrap: true,
-    pause: false
+
+  // Prevent default focus or scroll behavior during transitions
+  heroCarousel.addEventListener('slid.bs.carousel', function (e) {
+    e.stopPropagation();
+    document.activeElement.blur(); // Ensure the focus does not jump
+  });
+
+  // Optional: Adjust the viewport manually if needed
+  heroCarousel.addEventListener('slide.bs.carousel', function () {
+    window.scrollTo(0, window.pageYOffset); // Retain the current scroll position
+  });
+});
+const heroCarousel = document.querySelector("#heroCarousel");
+
+heroCarousel.addEventListener("slid.bs.carousel", () => {
+  heroCarousel.style.height = ""; // Reset height after transition
+});
+
+heroCarousel.addEventListener("slide.bs.carousel", () => {
+  const activeSlide = document.querySelector(".carousel-item.active");
+  heroCarousel.style.height = `${activeSlide.offsetHeight}px`; // Set height to the active slide
+});
+
+
+
+//video
+document.addEventListener("DOMContentLoaded", function () {
+  const videoButton = document.getElementById("play-video");
+  const modal = document.getElementById("video-modal");
+  const closeButton = document.getElementById("close-video");
+  const video = document.getElementById("internal-video");
+
+  // Open video modal
+  videoButton.addEventListener("click", function (e) {
+    e.preventDefault();  // Prevent any default action
+    modal.style.display = "flex"; // Show modal
+    video.play(); // Play the video
+  });
+
+  // Close video modal
+  closeButton.addEventListener("click", function () {
+    video.pause(); // Pause video
+    video.currentTime = 0; // Reset video
+    modal.style.display = "none"; // Hide modal
   });
 });

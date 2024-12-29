@@ -3,25 +3,19 @@
 
 {% block content %} 
 
-
-
 <section id="hero" class="d-flex align-items-center">
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-    
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-duration="1000">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="d-flex justify-content-center align-items-center position-relative">
+        <div class="d-flex justify-content-center align-items-center position-relative h-100">
           <!-- Background Image -->
           <img src="{% static 'img/slider-1-4.jpg' %}" class="d-block w-100" alt="Background Image 1">
           <div class="fade-overlay"></div>
           <div class="fade-overlay"></div>
           <!-- Overlay with Content -->
-          
           <div class="overlay position-absolute w-100 h-100 top-0 start-0 d-flex justify-content-center align-items-center">
-            
             <div class="row w-55">
               <!-- Left Content (Text) -->
-              
               <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
                 <h1>Taste of quality</h1>
                 <h2>Let us fulfill your needs, enter a delivery time & enjoy your food</h2>
@@ -37,17 +31,14 @@
         </div>
       </div>
       <div class="carousel-item">
-        <div class="d-flex justify-content-center align-items-center position-relative">
+        <div class="d-flex justify-content-center align-items-center position-relative h-100">
           <!-- Background Image -->
-          <img src="{% static 'img/contact-bg.jpg' %}" class="d-block w-100" alt="Background Image 1">
+          <img src="{% static 'img/contact-bg.jpg' %}" class="d-block w-100" alt="Background Image 2">
           
           <!-- Overlay with Content -->
-          
           <div class="overlay position-absolute w-100 h-100 top-0 start-0 d-flex justify-content-center align-items-center">
-            
             <div class="row w-55">
               <!-- Left Content (Text) -->
-              
               <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
                 <h1>Taste of quality</h1>
                 <h2>Let us fulfill your needs, enter a delivery time & enjoy your food</h2>
@@ -75,7 +66,6 @@
     </button>
   </div>
 </section>
-
 
 
 
@@ -146,6 +136,92 @@
   <!-- End Hero -->
 <br>
 <br>
+
+<!-- ======= About Section 1 ======= -->
+<section id="custom-section" class="d-flex align-items-center py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Side (Image with Border, Video Button, and Overlay Image) -->
+      <div class="col-lg-6 position-relative">
+        <!-- Border Behind Image -->
+        <div class="image-border"></div>
+        <!-- Main Image -->
+        <img src="{% static 'img/main-image.png' %}" class="img-fluid main-image " alt="Main Image">
+        
+        <!-- Video Button -->
+        <!-- Video Button -->
+<!-- Video Button -->
+<!-- Video Button -->
+<button id="play-video" class="video-button position-absolute top-0 end-0">
+  <i class="bi bi-play-circle">►</i>
+</button>
+
+<!-- Modal -->
+<div id="video-modal" class="video-modal">
+  <div class="modal-content">
+    <button id="close-video" class="close-btn">X</button>
+    <video id="internal-video" width="100%" controls>
+      <source src="{% static 'videos/sample.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+
+        
+
+        <!-- Overlay Image -->
+        <img src="{% static 'img/overlay-image.png' %}" class="img-fluid overlay-image position-absolute bottom-0 end-0" alt="Overlay Image">
+      </div>
+      
+<!-- Right Side (Text Content) -->
+<div class="col-lg-6">
+  <h2 class="mb-3">About Golden Meat</h2>
+  <h3 class="mb-4">We Provide Best Meat</h3>
+  <p>
+    We are trusted by many clients from all over the country. Golden Meat International Company imports, markets, and distributes frozen, chilled, fresh meat and others in Saudi Arabia. Since its establishment in 2018, the company has expanded its customer base to over 2000 retail, food service, and wholesale establishments. It runs three branches, each of which has a warehouse with temperature control. Golden Meat International Company works with more than 40 suppliers, the majority of whom are well-known on a global scale and have established market existence worldwide.
+  </p>
+  <div class="checklist-section wider-container py-4">
+    <div class="checklist row">
+      <div class="check-item col-md-4 mb-3">
+        <i class="bi bi-check-circle text-success me-2"></i>
+        <span class="symbol" style="color: #ddad52;">&#x2714;</span> Premium Cuts
+      </div>
+      <div class="check-item col-md-4 mb-3">
+        <i class="bi bi-check-circle text-success me-2"></i>
+        <span class="symbol" style="color: #ddad52;">&#x2714;</span> PREMIUM QUALITY
+      </div>
+      <div class="check-item col-md-4 mb-3">
+        <i class="bi bi-check-circle text-success me-2"></i>
+        <span class="symbol" style="color: #ddad52;">&#x2714;</span> Custom Butchering
+      </div>
+      <div class="check-item col-md-4 mb-3">
+        <i class="bi bi-check-circle text-success me-2"></i>
+        <span class="symbol" style="color: #ddad52;">&#x2714;</span> Freshness
+      </div>
+      <div class="check-item col-md-4 mb-3">
+        <i class="bi bi-check-circle text-success me-2"></i>
+        <span class="symbol" style="color: #ddad52;">&#x2714;</span> TRANSPARENCY AND TRUST
+      </div>
+      <div class="check-item col-md-4 mb-3">
+        <i class="bi bi-check-circle text-success me-2"></i>
+        <span class="symbol" style="color: #ddad52;">&#x2714;</span> HIGH STANDARD TRADING & LOGISTICS
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="action-buttons">
+    <a href="#services" class="btn btn-primary me-3">More about us 	</a>
+    <a href="#contact" class="btn btn-outline-secondary">Contact Us</a>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -437,11 +513,11 @@
         </div>
 
         <div class="owl-carousel clients-carousel">
-          <img src="{% static 'img/clients/Hyper-Panda-01.png' %}" alt="Hyperpanda">
-          <img src="{% static 'img/clients/Danube.png' %}" alt="">
-          <img src="{% static 'img/clients/othaim.png' %}" alt="">
-          <img src="{% static 'img/clients/rootura.jpeg' %}" alt="">
-          <img src="{% static 'img/clients/carrefour.png' %}" alt="">
+          <img src="{% static 'img/clients/1.png' %}" alt="Hyperpanda">
+          <img src="{% static 'img/clients/2.png' %}" alt="">
+          <img src="{% static 'img/clients/3.png' %}" alt="">
+          <img src="{% static 'img/clients/4.png' %}" alt="">
+          <img src="{% static 'img/clients/9.png' %}" alt="">
         </div>
 
       </div>
@@ -458,22 +534,22 @@
         </div>
 
         <div class="owl-carousel clients-carousel">
-          <img src="{% static 'img/partners/usmef-logo-1.png' %}" alt="">
-          <img src="{% static 'img/partners/images.png' %}" alt="">
-          <img src="{% static 'img/partners/15-removebg-preview.png' %}" alt="">
-          <img src="{% static 'img/partners/Midfield-logo-b.png' %}" alt="">
-          <img src="{% static 'img/partners/11-removebg-preview.png' %}" alt="">
-          <img src="{% static 'img/partners/12-removebg-preview.png' %}" alt="">
-          <img src="{% static 'img/partners/000-removebg-preview.png' %}" alt="">
-          <img src="{% static 'img/partners/1-1-removebg-preview.png' %}" alt="">
-          <img src="{% static 'img/partners/2-1-removebg-preview.png' %}" alt="">
-          <img src="{% static 'img/partners/3-1-removebg-preview.png' %}" alt="">
-          <img src="{% static 'img/partners/4-1-removebg-preview.png' %}" alt="">
-          <img src="{% static 'img/partners/5-removebg-preview.png' %}" alt="">
-          <img src="{% static 'img/partners/6-removebg-preview.png' %}" alt="">
-          <img src="{% static 'img/partners/16-removebg-preview.png' %}" alt="">
-          <img src="{% static 'img/partners/18-removebg-preview.png' %}" alt="">
+          <img src="{% static 'img/partners/000.png' %}" alt="">
+          <img src="{% static 'img/partners/1-1.png' %}" alt="">
+          <img src="{% static 'img/partners/2-1.png' %}" alt="">
+          <img src="{% static 'img/partners/3-1.png' %}" alt="">
+          <img src="{% static 'img/partners/4-1.png' %}" alt="">
+          <img src="{% static 'img/partners/5.png' %}" alt="">
+          <img src="{% static 'img/partners/6.png' %}" alt="">
+          <img src="{% static 'img/partners/7.png' %}" alt="">
+          <img src="{% static 'img/partners/8.png' %}" alt="">
+          <img src="{% static 'img/partners/9-1.png' %}" alt="">
+          <img src="{% static 'img/partners/10.png' %}" alt="">
+          <img src="{% static 'img/partners/11.png' %}" alt="">
+          <img src="{% static 'img/partners/12.png' %}" alt="">
           <img src="{% static 'img/partners/15.png' %}" alt="">
+          <img src="{% static 'img/partners/16.png' %}" alt="">
+          <img src="{% static 'img/partners/18.png' %}" alt="">
 
         </div>
 
