@@ -139,7 +139,7 @@
 
 <!-- ======= About Section 1 ======= -->
 <section id="custom-section" class=" align-items-center py-5 " >
-  <div class="container" style="max-width: 1477px;" >
+  <div class="container" style="max-width: 1200px;" >
     <div class="row align-items-center" >
       <!-- Left Side (Image with Border, Video Button, and Overlay Image) -->
       <div class="col-lg-5 position-relative">
@@ -229,15 +229,15 @@ width: 100;
 <br>
 <br>
 <div class="action-buttons d-flex align-items-center">
-  <a href="#services" class="btn custom-primary liquid me-3">
+  <a href="{% url 'about' %}" class="btn custom-primary liquid me-3">
     <img src="{% static 'img/icons/meat.png' %}"  alt="icon" class="button-icon ">
     More about us</a>
   <a href="tel:+123456789" class=" custom-secondary liquid me-2 fa fa-phone ">
     <i class="bi bi-telephone-fill"></i>
   </a>
-  <div class="contact-info  text-center">
+  <div class="contact-info  ">
     <span class="call-us-text">Call us</span>
-    <strong class="phone-number">+123 456 789</strong>
+    <strong class="phone-number">+966112631842</strong>
   </div>
 </div>
 
@@ -248,8 +248,120 @@ width: 100;
   </div>
 </section>
 
+<!-- ======= End About Section 1 ======= -->
+
+
+<!-- ======= Briefe section (6 boxes) ======= -->
+<section id="company-stats" class="py-5"> 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="stats-box btn-border-reveal text-center p-4">
+          <span>+</span><span class="counter" data-target="3">0</span>
+          <p>Branches</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="stats-box btn-border-reveal text-center p-4">
+          <span>+</span><span class="counter" data-target="35">0</span><span>K</span>
+          <p>Clients</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="stats-box btn-border-reveal text-center p-4">
+          <span>+</span><span class="counter" data-target="25">0</span>
+          <p>Suppliers</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="stats-box btn-border-reveal text-center p-4">
+          <span>+</span><span class="counter" data-target="20">0</span>
+          <p>Trucks</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="stats-box btn-border-reveal text-center p-4">
+          <span>+</span><span class="counter" data-target="550">0</span><span>T</span>
+          <p>Tons of meat</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="stats-box btn-border-reveal text-center p-4">
+          <span>+</span><span class="counter" data-target="15">0</span>
+          <p>Years of experience</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products carousel -->
+<section id="products" class="products section-bg">
+  <div class="container " >
+
+    <div class="section-title">
+      <h2>Our Products</h2>
+      <p>Explore Our Premium Selection of Meats and Dairy</p>
+    </div>
+
+    <div class="owl-carousel clients-carousel">
+      <div class="client-item">
+        <div class="icon-frame lamb">
+          <img src="{% static 'img/icons/beef-meat.svg' %}" class="svg-icon" alt="Lamb Meat Icon" />
+        </div>
+        <p>BEEF MEAT</p>
+      </div>
+      <div class="client-item">
+        <div class="icon-frame lamb">
+          <img src="{% static 'img/icons/lamb-meat.svg' %}" class="svg-icon" alt="Lamb Meat Icon" />
+        </div>
+        <p>LAMB MEAT</p>
+      </div>
+      <div class="client-item">
+        <div class="icon-frame lamb">
+          <img src="{% static 'img/icons/goat.svg' %}" class="svg-icon" alt="Lamb Meat Icon" />
+        </div>
+        <p>GOAT MEAT</p>
+      </div>
+      <div class="client-item">
+        <div class="icon-frame lamb">
+          <img src="{% static 'img/icons/chicken.svg' %}" class="svg-icon" alt="Lamb Meat Icon" />
+        </div>
+        <p>CHICKEN</p>
+      </div>
+      
+      <div class="client-item">
+        <div class="icon-frame lamb">
+          <img src="{% static 'img/icons/duck.svg' %}" class="svg-icon" alt="Lamb Meat Icon" />
+        </div>
+        <p>DUCK</p>
+      </div>
+      <div class="client-item">
+        <div class="icon-frame lamb">
+          <img src="{% static 'img/icons/cheesee.svg' %}" class="svg-icon" alt="Lamb Meat Icon" />
+        </div>
+        <p>DAIRY</p>
+      </div>
+      <div class="client-item">
+        <div class="icon-frame lamb">
+          <img src="{% static 'img/icons/sauces.svg' %}" class="svg-icon" alt="Lamb Meat Icon" />
+        </div>
+        <p>SAUCES</p>
+      </div>
+      </div>
+    </div>
+
+    <!-- "More About Our Products" Button -->
+    <div class="more-about-btn">
+      <a href="#more-products" class="btn-more-about">More About Our Products</a>
+    </div>
+    
+  </div>
+</section>
+
+
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    {% comment %} <section id="about" class="about">
       <div class="container">
 
         <div class="row justify-content-between">
@@ -293,7 +405,8 @@ width: 100;
       </div>
 
       </div>
-    </section><!-- End About Section -->
+    </section> {% endcomment %}
+    <!-- End About Section -->
 
     <!-- ======= Services Section ======= -->
     <!-- <section id="services" class="services section-bg">
@@ -580,7 +693,6 @@ width: 100;
 
       </div>
     </section>
-
     <!-- ======= Contact Us Section ======= -->
     <!-- <section id="contact" class="contact">
       <div class="container">

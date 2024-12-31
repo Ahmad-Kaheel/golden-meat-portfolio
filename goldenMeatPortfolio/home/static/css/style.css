@@ -11,8 +11,262 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+#  Products Carousel
+--------------------------------------------------------------*/
+.products .owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.products .owl-item img {
+  height: 80%;
+  transition: 0.3s;
+
+}
+
+/* 
+.products .owl-item img:hover {
+  opacity: 1;
+} */
+
+.products .owl-nav,
+.products .owl-dots {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.products .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fbe2d8 !important;
+}
+
+.products .owl-dot.active {
+  background-color: #ddad52 !important;
+}
+
+
+.icon-frame i {
+  font-size: 40px;
+  color: #ddad52;
+  /* Default color */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* transition: color 0.6s ease; */
+  /* Gradual transition for color change */
+}
+
+/* Default icon color and size */
+.icon-frame .svg-icon {
+  font-size: 40px;
+  filter: invert(96%) sepia(34%) saturate(4093%) hue-rotate(312deg) brightness(87%) contrast(99%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* transition: filter 0.6s ease; */
+  /* Gradual transition for color change */
+}
+
+.icon-frame.lamb:hover .svg-icon {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(211deg) brightness(101%) contrast(102%);
+}
+
+
+/* Adjust text */
+.client-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+}
+
+
+/* Circle icon frame */
+.icon-frame {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: background-color 0.5s ease;
+}
+
+
+
+/* Gradual color change on hover */
+.icon-frame:hover i {
+  color: #fff;
+}
+
+/* Gradual solid fill on hover */
+.icon-frame:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ddad52;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: fillEffect 0.5s forwards;
+}
+
+@keyframes fillEffect {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Specific icon styles based on the type */
+.icon-frame:hover::before {
+  animation-delay: 0.1s;
+}
+
+
+/* Adjust text */
+.client-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Button container */
+.more-about-btn {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Button styles */
+.btn-more-about {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ddad52;
+  background-color: #fff;
+  /* Same as icon color */
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for the button */
+.btn-more-about:hover {
+  background-color: #ddad52;
+  /* Change to white */
+  color: #fff;
+  /* Icon color */
+  transform: translateY(-3px);
+  /* Slightly lift the button on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  /* Slight shadow for lifted effect */
+}
+
+/*--------------------------------------------------------------
+# Briefe section (6 boxes)
+--------------------------------------------------------------*/
+
+
+/* For the card box */
+.stats-box {
+  position: relative;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ddad52;
+  background: none;
+  border: 2px solid #ddad52;
+  border-radius: 8px;
+  cursor: default;
+  /* Prevent the cursor from changing to pointer */
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for the card */
+.stats-box:hover {
+  color: white;
+  /* Text color on hover */
+}
+
+.stats-box:hover p,
+.stats-box:hover span {
+  color: white;
+  /* Ensure the text inside <p> also changes to white */
+}
+
+/* Button style liquid effect */
+.btn-border-reveal::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ddad52;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.stats-box:hover::after {
+  width: 100%;
+  /* Animate the background effect */
+}
+
+.stats-box:hover {
+  color: white;
+}
+
+/* Ensure the + sign and number are on the same line */
+.stats-box span {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 0.2rem;
+}
+
+.stats-box p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0;
+  color: inherit;
+}
+
+
+/*--------------------------------------------------------------
 #  Right side 
 --------------------------------------------------------------*/
+.call-us-text {
+  display: block;
+  /* Ensures it behaves like a block-level element */
+  text-align: left;
+  /* Aligns the text to the left */
+  font-size: 0.8rem;
+  /* Adjust the font size */
+  margin-bottom: 0.2rem;
+  /* Adds spacing below */
+}
+
 #custom-section .container-fluid {
   max-width: 100%;
   /* Wider section */
@@ -196,9 +450,6 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-
-
-
 }
 
 
@@ -209,7 +460,6 @@
 
 /* Contact info styling */
 .contact-info {
-  display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 16px;
@@ -249,8 +499,8 @@
 .image-border {
   position: absolute;
   bottom: -30px;
-  left: -50px;
-  width: calc(100% + -135px);
+  left: -47px;
+  width: calc(100% + -115px);
   height: calc(100% - 40px);
   border: 3px solid #ddad52;
   animation: zumpBottom 2s linear infinite;
@@ -1374,7 +1624,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 150px;
+  gap: 20px;
 }
 
 
@@ -2639,7 +2889,7 @@ section {
   color: #fff;
 }
 
-.team .member .member-info-content span {
+.team .member .member-info-content h3 {
   font-style: italic;
   display: block;
   font-size: 13px;

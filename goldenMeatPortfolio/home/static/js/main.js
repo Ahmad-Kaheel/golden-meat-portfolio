@@ -211,3 +211,42 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none"; // Hide modal
   });
 });
+
+//Brief sectoin Counter Animation
+// Counter animation
+document.addEventListener('DOMContentLoaded', function () {
+  const counters = document.querySelectorAll('.counter');
+
+  function animateCounter(counter) {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const speed = target / 200;  // Adjust speed to control how fast the counter increases
+
+    const interval = setInterval(() => {
+      count += speed;
+      if (count >= target) {
+        count = target;
+        clearInterval(interval);
+      }
+      counter.innerText = Math.floor(count);  // Show the integer part of the count
+    }, 10);  // Adjust the delay to control the speed of the counting
+  }
+
+  // Observer to trigger counters once the section is in view
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counterElement = entry.target.querySelector('.counter');
+        if (counterElement) {
+          animateCounter(counterElement);  // Trigger counter animation
+        }
+        observer.unobserve(entry.target);  // Stop observing after the animation starts
+      }
+    });
+  }, { threshold: 0.5 });  // When 50% of the section is in view, start the animation
+
+  // Observe each stats-box
+  document.querySelectorAll('.stats-box').forEach((box) => {
+    observer.observe(box);
+  });
+});
