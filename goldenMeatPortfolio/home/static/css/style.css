@@ -5,10 +5,120 @@
 * License: https://bootstrapmade.com/license/
 */
 
+.overlay-image2 {
+  width: 220px;
+  height: auto;
+  z-index: 3;
+  border-radius: 50%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  animation: zumpBottom 2s linear infinite;
+  bottom: -120px !important;
+}
 
 /*--------------------------------------------------------------
 #  My styles
 --------------------------------------------------------------*/
+#why-choose-us .icon-frame img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  filter: invert(96%) sepia(34%) saturate(4093%) hue-rotate(312deg) brightness(87%) contrast(99%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+#why-choose-us .icon-frame:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(0deg) brightness(101%) contrast(102%);
+}
+
+
+
+/*--------------------------------------------------------------
+#  Why choose us section style
+--------------------------------------------------------------*/
+/* Why Choose Us Section */
+#why-choose-us {
+  padding: 60px 0;
+}
+
+#why-choose-us .section-title h2 {
+  font-size: 32px;
+  color: #333;
+}
+
+#why-choose-us .section-title p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+#why-choose-us .client-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#why-choose-us .client-item .icon-frame {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(to bottom right, #ffefba, #ffffff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+
+#why-choose-us .client-item .icon-frame i {
+  font-size: 30px;
+  color: #ddad52;
+}
+
+#why-choose-us .client-item:hover .icon-frame {
+  transform: scale(1.1);
+  background: linear-gradient(to bottom right, #ddad52, #ffffff);
+  /* Optional hover background */
+}
+
+#why-choose-us .client-item:hover .icon-frame i {
+  color: #ffffff;
+  /* Change icon color to white */
+  transition: color 0.3s ease;
+  /* Smooth color transition */
+}
+
+#why-choose-us .client-item .content h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+#why-choose-us .client-item .content p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Image Frame Styling for Why Choose Us Section */
+#why-choose-us .image-frame {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#why-choose-us .image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#why-choose-us .image-frame:hover {
+  transform: scale(1.1);
+}
 
 /*--------------------------------------------------------------
 #  Products Carousel
