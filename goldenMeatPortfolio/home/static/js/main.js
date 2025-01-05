@@ -299,7 +299,7 @@ window.onscroll = function () {
   let backToTop = document.getElementById("back-to-top");
 
   // Update progress bar gradient
-  progressBar.style.background = `linear-gradient(to top, yellow ${scrollPercent}%, black ${scrollPercent}%)`;
+  progressBar.style.background = `linear-gradient(to top, #fdb417 ${scrollPercent}%, black ${scrollPercent}%)`;
 
   // Toggle visibility based on scroll position
   if (scrollTop > 50) {

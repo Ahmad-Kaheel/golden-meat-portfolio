@@ -31,7 +31,7 @@
   /* Bar width */
   height: 100px;
   /* Bar height */
-  background: linear-gradient(to top, black 0%, yellow 0%);
+  background: linear-gradient(to top, black 0%, #fdb417 0%);
   /* Dynamic gradient */
   z-index: 1000;
   border-radius: 3px;
@@ -125,7 +125,7 @@
   margin-top: 15px;
   display: inline-block;
   padding: 10px 20px;
-  background-color: #ddad52;
+  background-color: #fdb417;
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -133,7 +133,7 @@
 }
 
 #careers-carousel .career-card .btn-apply:hover {
-  background-color: #ddad52;
+  background-color: #fdb417;
 }
 
 
@@ -157,7 +157,7 @@
 }
 
 #careers-carousel .owl-dots .owl-dot.active {
-  background-color: #ddad52;
+  background-color: #fdb417;
   /* Active dot color */
 }
 
@@ -177,8 +177,8 @@
   width: 50%;
   height: 50%;
   object-fit: contain;
-  filter: invert(96%) sepia(34%) saturate(4093%) hue-rotate(312deg) brightness(87%) contrast(99%);
-  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: brightness(0) saturate(100%) invert(83%) sepia(20%) saturate(5809%) hue-rotate(345deg) brightness(103%) contrast(101%);
+  /* transition: filter 0.3s ease, transform 0.3s ease; */
 }
 
 #why-choose-us .icon-frame:hover img {
@@ -226,12 +226,12 @@
 
 #why-choose-us .client-item .icon-frame i {
   font-size: 30px;
-  color: #ddad52;
+  color: #fdb417;
 }
 
 #why-choose-us .client-item:hover .icon-frame {
   transform: scale(1.1);
-  background: linear-gradient(to bottom right, #ddad52, #ffffff);
+  background: linear-gradient(to bottom right, #fdb417, #ffffff);
   /* Optional hover background */
 }
 
@@ -309,13 +309,13 @@
 }
 
 .products .owl-dot.active {
-  background-color: #ddad52 !important;
+  background-color: #fdb417 !important;
 }
 
 
 .icon-frame i {
   font-size: 40px;
-  color: #ddad52;
+  color: #fdb417;
   /* Default color */
   position: absolute;
   top: 50%;
@@ -328,7 +328,8 @@
 /* Default icon color and size */
 .icon-frame .svg-icon {
   font-size: 40px;
-  filter: invert(96%) sepia(34%) saturate(4093%) hue-rotate(312deg) brightness(87%) contrast(99%);
+  filter: saturate(100%) invert(83%) sepia(20%) saturate(5809%) hue-rotate(345deg) brightness(103%) contrast(101%);
+  /* filter: invert(78%) sepia(98%) saturate(745%) hue-rotate(352deg) brightness(98%) contrast(102%); */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -381,7 +382,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ddad52;
+  background-color: #fdb417;
   border-radius: 50%;
   transform: scale(0);
   animation: fillEffect 0.5s forwards;
@@ -423,7 +424,7 @@
   padding: 12px 30px;
   font-size: 16px;
   font-weight: bold;
-  color: #ddad52;
+  color: #fdb417;
   background-color: #fff;
   /* Same as icon color */
   border-radius: 30px;
@@ -434,7 +435,7 @@
 
 /* Hover effect for the button */
 .btn-more-about:hover {
-  background-color: #ddad52;
+  background-color: #fdb417;
   /* Change to white */
   color: #fff;
   /* Icon color */
@@ -455,9 +456,9 @@
   padding: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #ddad52;
+  color: #fdb417;
   background: none;
-  border: 2px solid #ddad52;
+  border: 2px solid #fdb417;
   border-radius: 8px;
   cursor: default;
   /* Prevent the cursor from changing to pointer */
@@ -485,7 +486,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #ddad52;
+  background-color: #fdb417;
   transition: width 0.3s ease;
   z-index: -1;
 }
@@ -583,7 +584,7 @@
 .custom-primary {
   display: flex;
   align-items: center;
-  background-color: #ddad52;
+  background-color: #fdb417;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
@@ -594,7 +595,7 @@
 }
 
 .custom-primary:hover {
-  background-color: #c7a146;
+  background-color: #fdb417;
 }
 
 /* Animation Keyframes */
@@ -616,7 +617,7 @@
   font-weight: 600;
   color: white;
   background: none;
-  border: 2px solid #c7a146;
+  border: 2px solid #fdb417;
   border-radius: 8px;
   cursor: pointer;
   overflow: hidden;
@@ -628,9 +629,9 @@
   padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: 600;
-  color: #c7a146;
+  color: #fdb417;
   background: none;
-  border: 2px solid #c7a146;
+  border: 2px solid #fdb417;
   border-radius: 8px;
   cursor: pointer;
   overflow: hidden;
@@ -638,7 +639,7 @@
 }
 
 .liquid {
-  background: linear-gradient(#c7a146 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
+  background: linear-gradient(#fdb417 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
   transition: 0.3s var(--t, 0s),
     background-position 0.3s calc(0.3s - var(--t, 0s));
 }
@@ -665,9 +666,9 @@
   /* Adjust size */
   font-size: 1rem;
   font-weight: 600;
-  color: #c7a146;
+  color: #fdb417;
   background: none;
-  border: 2px solid #c7a146;
+  border: 2px solid #fdb417;
   border-radius: 50%;
   /* Makes the button circular */
   cursor: pointer;
@@ -679,7 +680,7 @@
 }
 
 .custom-circle.liquid {
-  background: linear-gradient(#c7a146 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
+  background: linear-gradient(#fdb417 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
   transition: 0.3s var(--t, 0s),
     background-position 0.3s calc(0.3s - var(--t, 0s));
 }
@@ -701,9 +702,9 @@
   /* Adjust size */
   font-size: 1rem;
   font-weight: 600;
-  color: #c7a146;
+  color: #fdb417;
   background: none;
-  border: 2px solid #c7a146;
+  border: 2px solid #fdb417;
   border-radius: 50%;
   /* Makes the button circular */
   cursor: pointer;
@@ -716,7 +717,7 @@
 
 
 .custom-secondary:hover {
-  background-color: #ddad52;
+  background-color: #fdb417;
   color: #ffffff;
 }
 
@@ -736,7 +737,7 @@
 
 .phone-number {
   font-size: 16px;
-  color: #ddad52;
+  color: #fdb417;
 }
 
 
@@ -764,7 +765,7 @@
   left: -47px;
   width: calc(100% + -115px);
   height: calc(100% - 40px);
-  border: 3px solid #ddad52;
+  border: 3px solid #fdb417;
   animation: zumpBottom 2s linear infinite;
   z-index: 1;
 }
@@ -795,7 +796,7 @@
   justify-content: center;
   width: 60px;
   height: 60px;
-  background-color: var(--boskery-base, #ddad52);
+  background-color: var(--boskery-base, #fdb417);
   color: #fff;
   font-size: 24px;
   z-index: 4;
@@ -836,7 +837,7 @@
   right: 10px;
   width: 50px;
   height: 50px;
-  background-color: #ddad52;
+  background-color: #fdb417;
   color: white;
   display: flex;
   justify-content: center;
@@ -874,7 +875,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #ddad52;
+  background-color: #fdb417;
   border: none;
   color: white;
   font-size: 20px;
@@ -1005,7 +1006,7 @@
   width: 100%;
   height: 100vh;
   background: #000;
-  border-bottom: 2px solid #ddad52;
+  border-bottom: 2px solid #fdb417;
   margin: 72px 0 -72px 0;
   overflow: hidden;
   /* Ensures the video doesn’t overflow out of the section */
@@ -1041,7 +1042,7 @@
   transition: 0.5s;
   margin: 10px;
   color: #fff;
-  background: #ddad52;
+  background: #fdb417;
 }
 
 #heroCarousel .btn-get-started:hover {
@@ -1159,7 +1160,7 @@
   transition: 0.5s;
   margin: 10px;
   color: #fff;
-  background: #ddad52;
+  background: #fdb417;
 } */
 
 
@@ -1228,7 +1229,7 @@
 }
 
 .saudi-vision-page .section-header i {
-  color: #ddad52;
+  color: #fdb417;
   font-size: 2.5rem;
 }
 
@@ -1246,7 +1247,7 @@
 
 .saudi-vision-page .vision-section p {
   padding-left: 5px;
-  border-left: 4px solid #ddad52;
+  border-left: 4px solid #fdb417;
 }
 
 /* Responsive Adjustments */
@@ -1316,7 +1317,7 @@
 }
 
 .corporate-governance-page .section-header i {
-  color: #ddad52;
+  color: #fdb417;
   /* Gold color for icons */
   font-size: 2.5rem;
 }
@@ -1345,27 +1346,27 @@
 
 .corporate-governance-page .governance-section p {
   padding-left: 5px;
-  border-left: 4px solid #ddad52;
+  border-left: 4px solid #fdb417;
   /* Subtle border for visual distinction */
 }
 
 .corporate-governance-page .code-of-conduct-section p {
   padding-left: 5px;
-  border-left: 4px solid #ddad52;
+  border-left: 4px solid #fdb417;
   /* Subtle border for visual distinction */
 }
 
 
 .corporate-governance-page .governance-structure-section p {
   padding-left: 5px;
-  border-left: 4px solid #ddad52;
+  border-left: 4px solid #fdb417;
   /* Subtle border for visual distinction */
 }
 
 
 .corporate-governance-page .compliance-risk-section p {
   padding-left: 5px;
-  border-left: 4px solid #ddad52;
+  border-left: 4px solid #fdb417;
   /* Subtle border for visual distinction */
 }
 
@@ -1464,7 +1465,7 @@
 
 .feature-title {
   font-size: 1.5rem;
-  color: #ddad52;
+  color: #fdb417;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -1527,7 +1528,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ddad52;
+  background-color: #fdb417;
   /* Card header color */
   color: #fff;
   font-size: 1.5rem;
@@ -1553,10 +1554,10 @@
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 1.2rem;
-  color: #ddad52;
+  color: #fdb417;
   /* Updated color */
   background-color: #fff;
-  border: 2px solid #ddad52;
+  border: 2px solid #fdb417;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -1573,7 +1574,7 @@
 
 /* Hover Effect for Arrow Button */
 .toggle-details .arrow-circle:hover {
-  background-color: #ddad52;
+  background-color: #fdb417;
   /* Invert colors on hover */
   color: #fff;
   transform: scale(1.1);
@@ -1805,12 +1806,12 @@
   font-size: 0.9rem;
   font-weight: bold;
   text-decoration: none;
-  color: #ddad52;
+  color: #fdb417;
   transition: color 0.3s ease;
 }
 
 .news-content .read-more:hover {
-  color: #ddad52;
+  color: #fdb417;
 }
 
 
@@ -1959,7 +1960,7 @@
   position: absolute;
   top: 50%;
   height: 2px;
-  background: #ddad52;
+  background: #fdb417;
   width: calc(90% - 100px);
   left: 5%;
 }
@@ -1969,7 +1970,7 @@
 .timeline-row:nth-child(even)::after {
   content: "";
   position: absolute;
-  background: #ddad52;
+  background: #fdb417;
   width: 2px;
   height: 150px;
   top: 100%;
@@ -2171,7 +2172,7 @@
   height: 26px;
   background-color: #2c2314;
   border-radius: 50%;
-  border: 5px solid #ddad52;
+  border: 5px solid #fdb417;
 }
 
 .feature-item h3 {
@@ -2242,7 +2243,7 @@ h6,
   border-radius: 3px;
   right: 15px;
   bottom: 15px;
-  background: #ddad52;
+  background: #fdb417;
   color: #fff;
   transition: display 0.5s ease-in-out;
   z-index: 99999;
@@ -2257,7 +2258,7 @@ h6,
 
 .back-to-top:hover {
   color: #fff;
-  background: #ddad52;
+  background: #fdb417;
   transition: background 0.2s ease-in-out;
 }
 
@@ -2357,12 +2358,12 @@ h6,
 .nav-menu a:hover,
 .nav-menu .active>a,
 .nav-menu li:hover>a {
-  color: #ddad52;
+  color: #fdb417;
   text-decoration: none;
 }
 
 .nav-menu .get-started a {
-  background: #ddad52;
+  background: #fdb417;
   color: #fff;
   border-radius: 50px;
   margin: 0 15px;
@@ -2370,7 +2371,7 @@ h6,
 }
 
 .nav-menu .get-started a:hover {
-  background: #ddad52;
+  background: #fdb417;
   color: #fff;
 }
 
@@ -2410,7 +2411,7 @@ h6,
 .nav-menu .drop-down ul a:hover,
 .nav-menu .drop-down ul .active>a,
 .nav-menu .drop-down ul li:hover>a {
-  color: #ddad52;
+  color: #fdb417;
 }
 
 .nav-menu .drop-down>a:after {
@@ -2492,7 +2493,7 @@ h6,
 }
 
 .mobile-nav .get-started a {
-  background: #ddad52;
+  background: #fdb417;
   color: #fff;
   border-radius: 50px;
   margin: 15px;
@@ -2500,7 +2501,7 @@ h6,
 }
 
 .mobile-nav .get-started a:hover {
-  background: #ddad52;
+  background: #fdb417;
   color: #fff;
 }
 
@@ -2610,7 +2611,7 @@ h6,
   width: 100%;
   height: 70vh;
   background: #fcfcfc;
-  border-bottom: 2px solid #ddad52;
+  border-bottom: 2px solid #fdb417;
   margin: 72px 0 -72px 0;
   overflow: hidden;
   /* Ensures the video doesn’t overflow out of the section */
@@ -2646,7 +2647,7 @@ h6,
   transition: 0.5s;
   margin: 10px;
   color: #fff;
-  background: #ddad52;
+  background: #fdb417;
 }
 
 #hero .btn-get-started:hover {
@@ -2765,7 +2766,7 @@ section {
   display: block;
   width: 60px;
   height: 2px;
-  background: #ddad52;
+  background: #fdb417;
   bottom: 0;
   left: calc(50% - 30px);
 }
@@ -2820,7 +2821,7 @@ section {
   transition: 0.5s;
   margin: 10px;
   color: #fff;
-  background: #ddad52;
+  background: #fdb417;
 }
 
 /*--------------------------------------------------------------
@@ -2927,12 +2928,12 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #ddad52;
+  color: #fdb417;
 }
 
 .portfolio #portfolio-flters1 a:hover,
 .portfolio #portfolio-flters1 a.filter-active {
-  color: #ddad52;
+  color: #fdb417;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -2981,7 +2982,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
-  color: #ddad52;
+  color: #fdb417;
   margin: 0 4px;
   font-size: 18px;
   line-height: 1;
@@ -3001,7 +3002,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: #ddad52;
+  background: #fdb417;
   color: #fff;
 }
 
@@ -3061,10 +3062,10 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: #ddad52;
+  font-family: #fdb417;
   font-size: 18px;
   font-weight: 600;
-  color: #ddad52;
+  color: #fdb417;
 }
 
 .faq .faq-list i {
@@ -3081,7 +3082,7 @@ section {
 }
 
 .faq .faq-list a.collapse {
-  color: #ddad52;
+  color: #fdb417;
 }
 
 .faq .faq-list a.collapsed {
@@ -3089,7 +3090,7 @@ section {
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #ddad52;
+  color: #fdb417;
 }
 
 .faq .faq-list a.collapsed i::before {
@@ -3177,7 +3178,7 @@ section {
 }
 
 .team .member .social a:hover {
-  color: #ddad52;
+  color: #fdb417;
 }
 
 .team .member .social i {
@@ -3237,15 +3238,15 @@ section {
 }
 
 .clients .owl-dot.active {
-  background-color: #ddad52 !important;
+  background-color: #fdb417 !important;
 }
 
 /*--------------------------------------------------------------
 # Contact Us
 --------------------------------------------------------------*/
 .contact .info {
-  border-top: 3px solid #ddad52;
-  border-bottom: 3px solid #ddad52;
+  border-top: 3px solid #fdb417;
+  border-bottom: 3px solid #fdb417;
   padding: 30px;
   background: #fff;
   width: 100%;
@@ -3254,7 +3255,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #ddad52;
+  color: #fdb417;
   float: left;
   width: 44px;
   height: 44px;
@@ -3305,21 +3306,21 @@ section {
 }
 
 .contact .info .social-links a:hover {
-  background: #ddad52;
+  background: #fdb417;
   color: #fff;
 }
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #ddad52;
+  background: #fdb417;
   color: #fff;
 }
 
 .contact .php-email-form {
   width: 100%;
-  border-top: 3px solid #ddad52;
-  border-bottom: 3px solid #ddad52;
+  border-top: 3px solid #fdb417;
+  border-bottom: 3px solid #fdb417;
   padding: 30px;
   background: #fff;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
@@ -3391,7 +3392,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #ddad52;
+  background: #fdb417;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -3475,7 +3476,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #ddad52;
+  background: #fdb417;
   color: #fff;
   transition: 0.3s;
   border-radius: 4px;
@@ -3555,13 +3556,13 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #ddad52;
+  color: #fdb417;
 }
 
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #ddad52;
+  background: #fdb417;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -3592,7 +3593,7 @@ section {
 }
 
 #footer .credits a {
-  color: #ddad52;
+  color: #fdb417;
 }
 
 @media (max-width: 575px) {
