@@ -3,26 +3,30 @@
 
 {% block content %} 
 
+{% comment %} test {% endcomment %}
+{% comment %} test {% endcomment %}
 <section id="hero" class="d-flex align-items-center">
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-duration="1000">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    <!-- Navigation Blocks -->
+    <div class="carousel-indicators custom-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Carousel Content -->
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="d-flex justify-content-center align-items-center position-relative h-100">
-          <!-- Background Image -->
           <img src="{% static 'img/slider-1-4.jpg' %}" class="d-block w-100" alt="Background Image 1">
           <div class="fade-overlay"></div>
-          <div class="fade-overlay"></div>
-          <!-- Overlay with Content -->
           <div class="overlay position-absolute w-100 h-100 top-0 start-0 d-flex justify-content-center align-items-center">
             <div class="row w-55">
-              <!-- Left Content (Text) -->
               <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
                 <h1>Taste of quality</h1>
                 <h2>Let us fulfill your needs, enter a delivery time & enjoy your food</h2>
                 <a href="#about" class="btn-get-started scrollto">About us</a>
               </div>
-              
-              <!-- Right Content (Image) -->
               <div class="col-lg-6 order-1 order-lg-2 hero-img">
                 <img src="{% static 'img/hero-img.png' %}" class="img-fluid animated" alt="Hero Image">
               </div>
@@ -32,20 +36,14 @@
       </div>
       <div class="carousel-item">
         <div class="d-flex justify-content-center align-items-center position-relative h-100">
-          <!-- Background Image -->
           <img src="{% static 'img/contact-bg.jpg' %}" class="d-block w-100" alt="Background Image 2">
-          
-          <!-- Overlay with Content -->
           <div class="overlay position-absolute w-100 h-100 top-0 start-0 d-flex justify-content-center align-items-center">
             <div class="row w-55">
-              <!-- Left Content (Text) -->
               <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
                 <h1>Taste of quality</h1>
                 <h2>Let us fulfill your needs, enter a delivery time & enjoy your food</h2>
                 <a href="#about" class="btn-get-started scrollto">About us</a>
               </div>
-              
-              <!-- Right Content (Image) -->
               <div class="col-lg-6 order-1 order-lg-2 hero-img">
                 <img src="{% static 'img/hero-img.png' %}" class="img-fluid animated" alt="Hero Image">
               </div>
@@ -54,16 +52,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 </section>
 

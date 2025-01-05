@@ -1006,7 +1006,7 @@
   height: 100vh;
   background: #000;
   border-bottom: 2px solid #fdb417;
-  margin: 72px 0 -72px 0;
+  /* margin: 72px 0 -72px 0; */
   overflow: hidden;
   /* Ensures the video doesn’t overflow out of the section */
   z-index: 1;
@@ -2573,158 +2573,48 @@ h6,
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-/* My styles */
-#hero .container {
-  position: relative;
-  z-index: 2;
-  /* Puts content above the video */
-  color: #fff;
-  /* Ensures text is readable */
-}
-
-#heroVideo {
+/* Custom carousel indicators for navigation blocks */
+.custom-indicators {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* Makes sure the video covers the whole section */
-  z-index: -1;
-  /* Puts the video behind the content */
+  top: 50%;
+  right: 20px;
+  /* Ensure it's on the right side */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  /* Align blocks vertically */
+  gap: 10px;
+  /* Add spacing between blocks */
+  z-index: 3;
+  /* Above other content */
 }
 
-#hero {
-  background-image: url('../img/slider-1-4.jpg');
-  /* Replace with your image path */
-  background-size: cover;
-  /* Ensures the image covers the entire section */
-  background-position: center;
-  /* Centers the image */
-  background-repeat: no-repeat;
-  /* Prevents tiling */
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: #fcfcfc;
-  border-bottom: 2px solid #fdb417;
-  /* margin: 72px 0 -72px 0; */
-  overflow: hidden;
-  /* Ensures the video doesn’t overflow out of the section */
-  z-index: 1;
+.custom-indicators button {
+  width: 15px;
+  height: 15px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-#hero h1 {
-  font-size: clamp(32px, 5vw, 48px);
-  line-height: clamp(40px, 6vw, 56px);
-  margin: 0 0 10px 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #150700;
+.custom-indicators button:hover {
+  transform: scale(1.2);
+  /* Slight zoom on hover */
 }
 
-#hero h2 {
-  font-size: clamp(18px, 3vw, 24px);
-  line-height: clamp(24px, 4vw, 30px);
-  color: #150700;
-  margin-bottom: 50px;
-  font-size: 24px;
+.custom-indicators button.active {
+  background-color: #fdb417;
+  /* Highlight the active block */
 }
 
-#hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 28px;
-  border-radius: 3px;
-  transition: 0.5s;
-  margin: 10px;
-  color: #fff;
-  background: #fdb417;
+/* Ensure no conflicting alignment rules */
+.carousel .custom-indicators {
+  left: auto;
+  /* Override any left alignment */
 }
 
-#hero .btn-get-started:hover {
-  background: #b18449;
-}
-
-#hero .animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
-}
-
-@media (min-width: 1024px) {
-  #hero {
-    /* background-attachment: fixed; */
-  }
-}
-
-@media (max-width: 991px) {
-  #hero {
-    height: calc(100vh - 72px);
-  }
-
-  #hero .animated {
-    -webkit-animation: none;
-    animation: none;
-  }
-
-  #hero .hero-img {
-    text-align: center;
-  }
-
-  #hero .hero-img img {
-    width: 50%;
-  }
-}
-
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
-
-  #hero .hero-img img {
-    width: 70%;
-  }
-}
-
-@media (max-width: 575px) {
-  #hero .hero-img img {
-    width: 80%;
-  }
-}
-
-@-webkit-keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(-10px);
-  }
-}
 
 /*--------------------------------------------------------------
 # Sections General

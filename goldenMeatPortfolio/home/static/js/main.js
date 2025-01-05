@@ -161,32 +161,19 @@ document.querySelectorAll('.toggle-details').forEach(toggle => {
 });
 
 
+document.querySelectorAll('.carousel-block-line').forEach((control) => {
+  control.addEventListener('click', function () {
+    const targetCarousel = document.querySelector(this.getAttribute('data-bs-target'));
+    const direction = this.getAttribute('data-bs-slide');
 
-// slideshow
-document.addEventListener('DOMContentLoaded', function () {
-  const heroCarousel = document.querySelector('#heroCarousel');
-
-  // Prevent default focus or scroll behavior during transitions
-  heroCarousel.addEventListener('slid.bs.carousel', function (e) {
-    e.stopPropagation();
-    document.activeElement.blur(); // Ensure the focus does not jump
-  });
-
-  // Optional: Adjust the viewport manually if needed
-  heroCarousel.addEventListener('slide.bs.carousel', function () {
-    window.scrollTo(0, window.pageYOffset); // Retain the current scroll position
+    if (direction === 'prev') {
+      bootstrap.Carousel.getInstance(targetCarousel).prev();
+    } else if (direction === 'next') {
+      bootstrap.Carousel.getInstance(targetCarousel).next();
+    }
   });
 });
-const heroCarousel = document.querySelector("#heroCarousel");
 
-heroCarousel.addEventListener("slid.bs.carousel", () => {
-  heroCarousel.style.height = ""; // Reset height after transition
-});
-
-heroCarousel.addEventListener("slide.bs.carousel", () => {
-  const activeSlide = document.querySelector(".carousel-item.active");
-  heroCarousel.style.height = `${activeSlide.offsetHeight}px`; // Set height to the active slide
-});
 
 
 
