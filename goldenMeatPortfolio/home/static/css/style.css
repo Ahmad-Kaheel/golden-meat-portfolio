@@ -25,6 +25,7 @@
 }
 
 #scroll-progress-bar {
+
   position: relative;
   width: 6px;
   /* Bar width */
@@ -35,9 +36,12 @@
   z-index: 1000;
   border-radius: 3px;
   overflow: hidden;
-  transition: background 0.1s linear;
-  /* Smooth transition */
+  transition: opacity 0.3s ease, background 0.1s linear;
+  /* Smooth opacity and color changes */
+  opacity: 0;
+  /* Initially hidden */
 }
+
 
 #scroll-progress-bar::after {
   content: "";

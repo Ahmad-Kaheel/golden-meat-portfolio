@@ -285,10 +285,6 @@ window.onscroll = function () {
   }
 };
 
-// Scroll to top functionality
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
 
 window.onscroll = function () {
   // Get scroll position and document height
@@ -298,7 +294,24 @@ window.onscroll = function () {
   // Calculate scroll percentage
   let scrollPercent = (scrollTop / docHeight) * 100;
 
-  // Adjust the gradient dynamically
+  // Select the progress bar and back-to-top button
   let progressBar = document.getElementById("scroll-progress-bar");
+  let backToTop = document.getElementById("back-to-top");
+
+  // Update progress bar gradient
   progressBar.style.background = `linear-gradient(to top, yellow ${scrollPercent}%, black ${scrollPercent}%)`;
+
+  // Toggle visibility based on scroll position
+  if (scrollTop > 50) {
+    progressBar.style.opacity = "1"; // Show the bar
+    backToTop.style.opacity = "1"; // Show the button
+  } else {
+    progressBar.style.opacity = "0"; // Hide the bar
+    backToTop.style.opacity = "0"; // Hide the button
+  }
 };
+
+// Scroll to top function
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
