@@ -250,3 +250,55 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(box);
   });
 });
+
+$(document).ready(function () {
+  $('#careers-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    dots: true, // Ensure this is set to true
+    autoplay: true,
+    autoplayTimeout: 5000,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      1024: { items: 3 }
+    }
+  });
+});
+// Scroll Progress Bar
+window.onscroll = function () {
+  // Calculate scroll percentage
+  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  let docHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+  let winHeight = window.innerHeight || document.documentElement.clientHeight;
+  let scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
+
+  // Update progress bar height
+  let progressBar = document.querySelector('#scroll-progress-bar::after');
+  progressBar.style.height = scrollPercent + '%';
+
+  // Update progress bar color based on scroll position (show remaining page)
+  if (scrollPercent < 50) {
+    progressBar.style.backgroundColor = '#ffad42'; // Yellow for top half
+  } else {
+    progressBar.style.backgroundColor = '#ff0000'; // Red for bottom half
+  }
+};
+
+// Scroll to top functionality
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.onscroll = function () {
+  // Get scroll position and document height
+  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+  // Calculate scroll percentage
+  let scrollPercent = (scrollTop / docHeight) * 100;
+
+  // Adjust the gradient dynamically
+  let progressBar = document.getElementById("scroll-progress-bar");
+  progressBar.style.background = `linear-gradient(to top, yellow ${scrollPercent}%, black ${scrollPercent}%)`;
+};

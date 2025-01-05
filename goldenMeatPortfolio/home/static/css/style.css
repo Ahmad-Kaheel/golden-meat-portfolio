@@ -9,10 +9,153 @@
 #  My styles
 --------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+/* Container for the back-to-top text and scroll progress bar */
+#back-to-top-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#scroll-progress-bar {
+  position: relative;
+  width: 6px;
+  /* Bar width */
+  height: 100px;
+  /* Bar height */
+  background: linear-gradient(to top, black 0%, yellow 0%);
+  /* Dynamic gradient */
+  z-index: 1000;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: background 0.1s linear;
+  /* Smooth transition */
+}
+
+#scroll-progress-bar::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0%;
+  background-color: #ffad42;
+  /* Initial color */
+  border-radius: 10px;
+}
+
+/* Style the back-to-top clickable text */
+#back-to-top {
+  color: #ffad42;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transform: rotate(90deg);
+  /* Make text vertical */
+  transition: transform 0.3s ease;
+}
+
+/* Button hover effect */
+#back-to-top:hover {
+  color: #ff8700;
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Vertical text styling */
+#back-to-top span {
+  display: inline-block;
+  writing-mode: vertical-rl;
+  text-align: center;
+  transform: rotate(90deg);
+}
+
+/*--------------------------------------------------------------
+#  Careers Section Styling 
+--------------------------------------------------------------*/
+#careers-carousel .owl-item {
+  padding: 10px;
+}
+
+#careers-carousel .career-item {
+  display: flex;
+  justify-content: center;
+}
+
+#careers-carousel .career-card {
+  width: 100%;
+  max-width: 320px;
+  margin: auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#careers-carousel .career-card:hover {
+  transform: scale(1.05);
+}
+
+#careers-carousel .career-card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+#careers-carousel .career-card p {
+  font-size: 14px;
+  color: #777;
+}
+
+#careers-carousel .career-card .btn-apply {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ddad52;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#careers-carousel .career-card .btn-apply:hover {
+  background-color: #ddad52;
+}
+
 
 /*--------------------------------------------------------------
 #  Why choose us section style
 --------------------------------------------------------------*/
+#careers-carousel .owl-dots {
+  text-align: center;
+  margin-top: 20px;
+  /* Space the dots */
+}
+
+#careers-carousel .owl-dots .owl-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+#careers-carousel .owl-dots .owl-dot.active {
+  background-color: #ddad52;
+  /* Active dot color */
+}
 
 .overlay-image2 {
   width: 220px;
@@ -99,6 +242,7 @@
   font-size: 18px;
   color: #333;
   margin-bottom: 5px;
+
 }
 
 #why-choose-us .client-item .content p {
