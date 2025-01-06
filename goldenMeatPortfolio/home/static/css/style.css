@@ -516,6 +516,7 @@
 }
 
 
+
 /*--------------------------------------------------------------
 #  Right side 
 --------------------------------------------------------------*/
@@ -537,11 +538,12 @@
 
 .checklist .check-item {
   /* white-space: nowrap; */
-
   /* Prevents wrapping */
   font-size: 14px;
+}
 
-
+.check-item img {
+  filter: brightness(0) saturate(100%) invert(83%) sepia(20%) saturate(5809%) hue-rotate(345deg) brightness(103%) contrast(101%);
 }
 
 .check-item {
@@ -563,7 +565,7 @@
 .checklist.row {
   display: flex;
   flex-wrap: nowrap;
-  margin-right: -15px;
+  margin-right: -44px;
   margin-left: -15px;
 }
 
@@ -768,6 +770,7 @@
   border: 3px solid #fdb417;
   animation: zumpBottom 2s linear infinite;
   z-index: 1;
+  padding-right: 55px;
 }
 
 .main-image {
@@ -789,13 +792,13 @@
 .video-button {
   font-family: 'Arial', sans-serif;
   bottom: 0;
-  left: 365px;
+  left: 415px;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   background-color: var(--boskery-base, #fdb417);
   color: #fff;
   font-size: 24px;
@@ -807,7 +810,10 @@
   border-radius: 0;
   animation: popupVideo 3s infinite;
   transition: background-color 2s ease;
+  border: none;
+  /* Add this line for a black border */
 }
+
 
 /* Shared animation for both layers */
 @keyframes popupVideo {
@@ -2573,48 +2579,42 @@ h6,
   color: #fff;
 }
 
-/* Custom carousel indicators for navigation blocks */
+/* Custom carousel indicators for vertical rotated rectangular buttons */
 .custom-indicators {
   position: absolute;
+  right: 0;
   top: 50%;
-  right: 20px;
-  /* Ensure it's on the right side */
   transform: translateY(-50%);
+  z-index: 15;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  /* Align blocks vertically */
-  gap: 10px;
-  /* Add spacing between blocks */
-  z-index: 3;
-  /* Above other content */
+  padding-left: 0;
+  margin-right: 20px;
+  list-style: none;
 }
 
 .custom-indicators button {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 30px;
+  margin-bottom: 10px;
   background-color: #ddd;
   border: none;
-  border-radius: 50%;
+  border-radius: 2px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
+  opacity: 0.7;
 }
 
 .custom-indicators button:hover {
-  transform: scale(1.2);
-  /* Slight zoom on hover */
+  transform: scale(1.1);
+  opacity: 1;
 }
 
-.custom-indicators button.active {
+.custom-indicators .active {
   background-color: #fdb417;
-  /* Highlight the active block */
+  opacity: 1;
 }
-
-/* Ensure no conflicting alignment rules */
-.carousel .custom-indicators {
-  left: auto;
-  /* Override any left alignment */
-}
-
 
 /*--------------------------------------------------------------
 # Sections General

@@ -160,21 +160,36 @@ document.querySelectorAll('.toggle-details').forEach(toggle => {
   });
 });
 
+// Get all the custom indicator buttons
+const customIndicators = document.querySelectorAll('.custom-indicators button');
 
-document.querySelectorAll('.carousel-block-line').forEach((control) => {
-  control.addEventListener('click', function () {
-    const targetCarousel = document.querySelector(this.getAttribute('data-bs-target'));
-    const direction = this.getAttribute('data-bs-slide');
+// Get the carousel element
+const myCarousel = document.querySelector('#heroCarousel');
+const carousel = new bootstrap.Carousel(myCarousel);
 
-    if (direction === 'prev') {
-      bootstrap.Carousel.getInstance(targetCarousel).prev();
-    } else if (direction === 'next') {
-      bootstrap.Carousel.getInstance(targetCarousel).next();
-    }
+// Add event listeners for each custom indicator button
+customIndicators.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    // Navigate to the corresponding slide
+    carousel.to(index);
+
+    // Update the active class on the buttons
+    customIndicators.forEach((btn) => btn.classList.remove('active'));
+    button.classList.add('active');
   });
 });
 
-
+// Optionally, sync the active class on page load
+myCarousel.addEventListener('slide.bs.carousel', (event) => {
+  const currentIndex = event.to; // The index of the new slide
+  customIndicators.forEach((button, index) => {
+    if (index === currentIndex) {
+      button.classList.add('active');
+    } else {
+      button.classList.remove('active');
+    }
+  });
+});
 
 
 //video
