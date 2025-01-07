@@ -482,11 +482,12 @@
   /* Circle shape */
   cursor: default;
   overflow: hidden;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
   z-index: 10;
+  flex-wrap: wrap;
   /* Ensure it's above the other circles */
 }
 
@@ -519,17 +520,38 @@
 
 /* Change text style */
 .stats-box span {
-  font-size: 2.2rem;
+  font-size: 3.0rem;
   font-weight: bold;
-  margin-right: 0.2rem;
+  margin-right: 0.0rem;
 }
 
+.margin-span {
+  font-size: 7.2rem;
+  font-weight: bold;
+  margin-right: 36%;
+  margin-left: 36%;
+}
+
+.stats-box p::before {
+  content: '';
+  display: block;
+  height: 1rem;
+  /* Adjust to create desired space */
+}
+
+/* .span-margin {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-right: 10%;
+} */
+
 .stats-box p {
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
+  margin-top: -3.5rem;
+  font-size: 1.3rem;
   text-align: center;
   margin-bottom: 0;
   color: inherit;
+  display: block;
 }
 
 /* Position the circles so they slightly overlap each other */
