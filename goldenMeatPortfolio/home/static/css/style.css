@@ -10,6 +10,204 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+/* My styles */
+#hero2 .container {
+  position: relative;
+  z-index: 2;
+  /* Puts content above the video */
+  color: #fff;
+  /* Ensures text is readable */
+}
+
+#heroVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Makes sure the video covers the whole section */
+  z-index: -1;
+  /* Puts the video behind the content */
+}
+
+#hero2 {
+  background-image: url('../img/slider-1-4.jpg');
+  /* Replace with your image path */
+  background-size: cover;
+  /* Ensures the image covers the entire section */
+  background-position: center;
+  /* Centers the image */
+  background-repeat: no-repeat;
+  /* Prevents tiling */
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background: #fcfcfc;
+  border-bottom: 2px solid #fdb417;
+  /* margin: 72px 0 -72px 0; */
+  overflow: hidden;
+  /* Ensures the video doesn’t overflow out of the section */
+  z-index: 1;
+}
+
+#hero2 h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: clamp(40px, 6vw, 56px);
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #150700;
+}
+
+#hero2 h2 {
+  font-size: clamp(18px, 3vw, 24px);
+  line-height: clamp(24px, 4vw, 30px);
+  color: #150700;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+#hero2 .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin: 10px;
+  color: #fff;
+  background: #fdb417;
+}
+
+#hero2 .btn-get-started:hover {
+  background: #b18449;
+}
+
+#hero2 .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (min-width: 1024px) {
+  #hero2 {
+    /* background-attachment: fixed; */
+  }
+}
+
+@media (max-width: 991px) {
+  #hero2 {
+    height: calc(100vh - 72px);
+  }
+
+  #hero2 .animated {
+    -webkit-animation: none;
+    animation: none;
+  }
+
+  #hero2 .hero-img {
+    text-align: center;
+  }
+
+  #hero2 .hero-img img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero2 h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero2 h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  #hero2 .hero-img img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero2 .hero-img img {
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+}
+
+.section-bg {
+  background-color: #fcfcfc;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 0;
+  line-height: 1px;
+  margin-bottom: 15px;
+  color: #c2b7b1;
+}
+
+.section-title p {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  color: #4e4039;
+}
+
+.section-title p::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #fdb417;
+  bottom: 0;
+  left: calc(50% - 30px);
+}
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 /* Container for the back-to-top text and scroll progress bar */
@@ -1096,7 +1294,6 @@
   background-repeat: no-repeat;
   /* Prevents tiling */
   height: 100vh;
-
   position: relative;
   width: 100%;
   height: 100vh;
