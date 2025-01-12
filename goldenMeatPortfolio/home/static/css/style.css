@@ -1459,7 +1459,81 @@ section {
 /*--------------------------------------------------------------
 #  Products
 --------------------------------------------------------------*/
+/* Parent container for the filters */
+.filters-container {
+  display: flex;
+  /* Align children horizontally */
+  flex-wrap: nowrap;
+  /* Prevent wrapping */
+  justify-content: flex-start;
+  /* Align items to the start */
+  align-items: flex-start;
+  /* Align items at the top */
+}
 
+.col-lg-3.vertical-filter {
+  padding-top: 60px;
+  margin-left: -30%;
+}
+
+#vertical-filter {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#vertical-filter li {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+#vertical-filter li:last-child {
+  border-bottom: none;
+}
+
+#vertical-filter li:hover,
+#vertical-filter .filter-active {
+  background: #fdb417;
+  color: #fff;
+  font-weight: bold;
+}
+
+.horizontal-filter {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.horizontal-filter li {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.horizontal-filter li:hover,
+.horizontal-filter .filter-active {
+  background: #fdb417;
+  color: #fff;
+  font-weight: bold;
+}
+
+.col-lg-9 {
+  padding: 0;
+  margin: 0;
+}
+
+#portfolio-flters1 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* Remove bullets */
+}
 
 #portfolio-flters1 a {
   display: inline-block;
@@ -2515,11 +2589,11 @@ body {
 }
 
 a {
-  color: #007bff;
+  color: #212529;
 }
 
 a:hover {
-  color: #0b6bd3;
+  color: #212529;
   text-decoration: none;
 }
 
@@ -3056,8 +3130,12 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+html body.vsc-initialized main section#portfolio.portfolio.col-lg-9 {
+  margin-left: 25% !important;
+}
+
 #portfolio {
-  padding: 0 !important;
+  padding: 0px !important;
 }
 
 .portfolio .container {
@@ -3073,14 +3151,14 @@ section {
 
 .portfolio #portfolio-flters {
   padding: 0;
-  margin: 0 0 0px 0;
+  margin: 0 0 0px 30%;
   list-style: none;
   text-align: center;
 }
 
 .portfolio #portfolio-flters1 {
   padding: 0;
-  margin: 0 0 0px 0;
+  margin: 0 -80% 0px 0;
   list-style: none;
   text-align: center;
 }
@@ -3092,7 +3170,7 @@ section {
   padding: 5px;
   font-size: 16px;
   font-weight: 600;
-  line-height: 20px;
+  /* line-height: 0px; */
   color: #212529;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
@@ -3105,7 +3183,7 @@ section {
   padding: 5px;
   font-size: 16px;
   font-weight: 600;
-  line-height: 20px;
+  /* line-height: 20px; */
   color: #212529;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;

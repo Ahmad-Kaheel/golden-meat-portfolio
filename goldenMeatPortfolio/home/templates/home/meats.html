@@ -16,17 +16,17 @@
     </div> {% endcomment %}
 
     <div class="row" data-aos="fade-up" data-aos-delay="100">
-      <div class="col-lg-12">
-        <ul id="portfolio-flters1">
+      
+      </div>
+      <div class="col-lg-9">
+        <ul id="portfolio-flters1" >
           <a href="{% url 'meats' %}" class="filter-active">
             <i class="fas fa-drumstick-bite"></i><br> Meats
           </a>
           <a href="{% url 'dairy' %}">
             <i class="fas fa-cheese"></i><br> Dairy
           </a>
-          {% comment %} <a href="{% url 'vegitable-fruits' %}">
-            <i class="fas fa-carrot"></i><br> Vegetables & Fruits
-          </a> {% endcomment %}
+          
           <a href="{% url 'oils' %}">
             <i class="fas fa-wine-bottle"></i><br> Oils
           </a>
@@ -34,7 +34,10 @@
             <i class="fas fa-ellipsis-h"></i><br> Others
           </a>
         </ul>
+
+
       </div>
+      
     </div>
   </section>
 
@@ -42,7 +45,7 @@
 
   
   
-  <section id="portfolio" class="portfolio">
+  <section id="portfolio" class="portfolio col-lg-9">
       <div class="container">
   
         {% comment %} <div class="section-title" data-aos="fade-up">
@@ -50,8 +53,9 @@
         </div>
         {% endcomment %}
         <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
+          
+          <div class="col-lg-9">
+            <ul id="portfolio-flters" >
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-beef">Beaf Meat</li>
               <li data-filter=".filter-dairy">Lamb Meat </li>
@@ -60,10 +64,21 @@
               <li data-filter=".filter-others">Duck</li>
             </ul>
           </div>
+          
+
+
         </div>
   
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-  
+          <div class="col-lg-3 vertical-filter">
+            <ul id="vertical-filter">
+              <li class="filter-active"><a href="#">All</a></li>
+              <li><a href="#">Frozen</a></li>
+              <li><a href="#">Large </a></li>
+              <li><a href="#">Meduim</a></li>
+              
+            </ul>
+          </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-beef">
             <div class="portfolio-wrap">
               <img src="{% static 'img/gallery/gallery-1-1.jpg' %}" class="img-fluid" alt="">
