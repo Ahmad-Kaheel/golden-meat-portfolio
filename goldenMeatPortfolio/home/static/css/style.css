@@ -1407,6 +1407,7 @@ section {
   font-weight: 700;
   line-height: 56px;
   color: #150700;
+  -webkit-text-stroke: 3px #fdb417;
 }
 
 #heroCarousel h2 {
@@ -1415,6 +1416,7 @@ section {
   color: #150700;
   margin-bottom: 50px;
   font-size: 24px;
+  -webkit-text-stroke: 1px #fdb417;
 }
 
 #heroCarousel .btn-get-started {
