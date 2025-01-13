@@ -33,4 +33,7 @@ urlpatterns = [
     path('contact-us/sales/', views.sales, name='sales'),
     path('contact-us/info/', views.contact_info, name='contact-info'),
     path('products/filter/', views.products_filter, name='products_filter'),
+
+    # Careers
+    path('careers/', views.careers, name='careers'),
 ]

@@ -96,3 +96,6 @@ def contact_info(request):
 
 def products_filter(request):
     return render(request, 'home/products_filter.html')
+
+def careers(request):
+    return render(request, 'home/careers.html')
