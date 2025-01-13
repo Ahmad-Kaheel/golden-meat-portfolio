@@ -7,67 +7,94 @@
 <br>
 <br>
 <br>
-<section id="portfolio" class="portfolio">
-  <div class="container">
-
-    {% comment %} <div class="section-title" data-aos="fade-up">
-      <h2>Products</h2>
-      <p>Check out our products</p>
-    </div> {% endcomment %}
-
-    <div class="row" data-aos="fade-up" data-aos-delay="100">
-      
-      </div>
-      <div class="col-lg-9">
-        <ul id="portfolio-flters1" >
-          <a href="{% url 'meats' %}" class="filter-active">
-            <i class="fas fa-drumstick-bite"></i><br> Meats
-          </a>
-          <a href="{% url 'dairy' %}">
-            <i class="fas fa-cheese"></i><br> Dairy
-          </a>
-          
-          <a href="{% url 'oils' %}">
-            <i class="fas fa-wine-bottle"></i><br> Oils
-          </a>
-          <a href="{% url 'others' %}">
-            <i class="fas fa-ellipsis-h"></i><br> Others
-          </a>
-        </ul>
-
-
-      </div>
-      
-    </div>
-  </section>
-
-
 
   
   
   <section id="portfolio" class="portfolio col-lg-9">
       <div class="container">
-  
+        <section id="portfolio" class="portfolio" >
+          <div class="container first-filter">
+        
+            {% comment %} <div class="section-title" data-aos="fade-up">
+              <h2>Products</h2>
+              <p>Check out our products</p>
+            </div> {% endcomment %}
+        
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+              
+              </div>
+              <div class="col-lg-9">
+                <ul id="portfolio-flters1" >
+                  <a href="{% url 'meats' %}" class="filter-active">
+                    <i class="fas fa-drumstick-bite"></i><br> Meats
+                  </a>
+                  <a href="{% url 'dairy' %}">
+                    <i class="fas fa-cheese"></i><br> Dairy
+                  </a>
+                  
+                  <a href="{% url 'oils' %}">
+                    <i class="fas fa-wine-bottle"></i><br> Oils
+                  </a>
+                  <a href="{% url 'others' %}">
+                    <i class="fas fa-ellipsis-h"></i><br> Others
+                  </a>
+                </ul>
+        
+        
+              </div>
+              
+            </div>
+          </section>
+        
+        
+        
         {% comment %} <div class="section-title" data-aos="fade-up">
           <p>Check out our diverse products</p>
         </div>
         {% endcomment %}
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          
-          <div class="col-lg-9">
-            <ul id="portfolio-flters" >
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-beef">Beaf Meat</li>
-              <li data-filter=".filter-dairy">Lamb Meat </li>
-              <li data-filter=".filter-VF">Goat</li>
-              <li data-filter=".filter-oils">Chicken</li>
-              <li data-filter=".filter-others">Duck</li>
+        <div class="row inner-filter" >
+          <div class="col-lg-9 order-lg-1">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">
+                <div class="icon-container">
+                  <img src="{% static 'img/icons/all.svg' %}" class="filter-icon" alt="All Icon" />
+                </div>
+                <p>All</p>
+              </li>
+              <li data-filter=".filter-beef">
+                <div class="icon-container">
+                  <img src="{% static 'img/icons/beef-meat.svg' %}" class="filter-icon" alt="Beef Meat Icon" />
+                </div>
+                <p>Beef Meat</p>
+              </li>
+              <li data-filter=".filter-dairy">
+                <div class="icon-container">
+                  <img src="{% static 'img/icons/lamb-meat.svg' %}" class="filter-icon" alt="Lamb Meat Icon" />
+                </div>
+                <p>Lamb Meat</p>
+              </li>
+              <li data-filter=".filter-VF">
+                <div class="icon-container">
+                  <img src="{% static 'img/icons/goat.svg' %}" class="filter-icon" alt="Goat Icon" />
+                </div>
+                <p>Goat</p>
+              </li>
+              <li data-filter=".filter-oils">
+                <div class="icon-container">
+                  <img src="{% static 'img/icons/chicken.svg' %}" class="filter-icon" alt="Chicken Icon" />
+                </div>
+                <p>Chicken</p>
+              </li>
+              <li data-filter=".filter-others">
+                <div class="icon-container">
+                  <img src="{% static 'img/icons/duck.svg' %}" class="filter-icon" alt="Duck Icon" />
+                </div>
+                <p>Duck</p>
+              </li>
             </ul>
           </div>
-          
-
-
         </div>
+        
   
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-3 vertical-filter">
@@ -215,6 +242,7 @@
           
   
         </div>
-    </section><!-- End Portfolio Section -->
+    </section>
+    <!-- End Portfolio Section -->
 
 {% endblock %}

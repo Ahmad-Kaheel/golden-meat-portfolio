@@ -10,6 +10,100 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+#  first filter additional styles
+--------------------------------------------------------------*/
+#portfolio-flters {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.container.first-filter {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -25px;
+}
+
+/*--------------------------------------------------------------
+#  Inner filter in products page 
+--------------------------------------------------------------*/
+.row.inner-filter {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: 220px;
+}
+
+/* General UL Styling */
+#portfolio-flters {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+/* Styling for LI elements */
+#portfolio-flters li {
+  text-align: center;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+#portfolio-flters li:hover {
+  color: #fdb417;
+  /* Gold hover color for text */
+}
+
+/* Image Icon Styling */
+.filter-icon {
+  width: 40px;
+  height: 40px;
+  fill: #000;
+  /* Default black icon color */
+  transition: fill 0.3s ease;
+  filter: brightness(0) saturate(100%) invert(12%) sepia(6%) saturate(842%) hue-rotate(157deg) brightness(99%) contrast(93%)
+    /* Black */
+}
+
+#portfolio-flters li:hover .filter-icon {
+  filter: saturate(100%) invert(83%) sepia(20%) saturate(5809%) hue-rotate(345deg) brightness(103%) contrast(101%);
+  /* Gold on hover */
+}
+
+/* Active/Selected Icon */
+#portfolio-flters .filter-active .filter-icon {
+  filter: saturate(100%) invert(83%) sepia(20%) saturate(5809%) hue-rotate(345deg) brightness(103%) contrast(101%);
+  /* Gold */
+}
+
+#portfolio-flters .filter-active {
+  color: #fdb417;
+  /* Gold text for active filter */
+}
+
+/* Text Below Icons */
+#portfolio-flters li p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 /* My styles */
@@ -3151,14 +3245,14 @@ html body.vsc-initialized main section#portfolio.portfolio.col-lg-9 {
 
 .portfolio #portfolio-flters {
   padding: 0;
-  margin: 0 0 0px 30%;
+  margin: 0 0 0px 0;
   list-style: none;
   text-align: center;
 }
 
 .portfolio #portfolio-flters1 {
   padding: 0;
-  margin: 0 -80% 0px 0;
+  margin: 0 0 0px 45%;
   list-style: none;
   text-align: center;
 }
@@ -3180,7 +3274,7 @@ html body.vsc-initialized main section#portfolio.portfolio.col-lg-9 {
   cursor: pointer;
   margin: 0 15px 15px 0;
   display: inline-block;
-  padding: 5px;
+  padding: 10px;
   font-size: 16px;
   font-weight: 600;
   /* line-height: 20px; */
