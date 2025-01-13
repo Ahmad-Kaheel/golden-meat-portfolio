@@ -12,14 +12,14 @@
 /*--------------------------------------------------------------
 #  first filter additional styles
 --------------------------------------------------------------*/
-#portfolio-flters {
+#portfolio-flters1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 20px;
+  gap: 47px;
 }
 
 .container.first-filter {
@@ -1626,7 +1626,6 @@ section {
   margin: 0;
   padding: 0;
   list-style: none;
-  /* Remove bullets */
 }
 
 #portfolio-flters1 a {
@@ -1636,18 +1635,15 @@ section {
   padding: 10px;
   text-decoration: none;
   color: inherit;
-  /* Adjust color as needed */
 }
 
 #portfolio-flters1 a i {
   font-size: 35px;
-  /* Adjust size as needed */
 }
 
 #portfolio-flters1 a .text {
   margin-top: 5px;
   font-size: 14px;
-  /* Adjust font size as needed */
 }
 
 
@@ -3251,11 +3247,12 @@ html body.vsc-initialized main section#portfolio.portfolio.col-lg-9 {
 }
 
 .portfolio #portfolio-flters1 {
-  padding: 0;
-  margin: 0 0 0px 45%;
+  padding: 0px;
+  margin: 0px 217px 3px 71%;
   list-style: none;
   text-align: center;
 }
+
 
 .portfolio #portfolio-flters li {
   cursor: pointer;
