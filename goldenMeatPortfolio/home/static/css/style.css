@@ -12,6 +12,38 @@
 /*--------------------------------------------------------------
 #  Careers first page 
 --------------------------------------------------------------*/
+#careers-carousel-2lines .career-card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  /* Space below the title */
+}
+
+#careers-carousel-2lines .career-card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+  /* Space below the paragraph */
+}
+
+#careers-carousel-2lines .career-card .btn-apply {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fdb417;
+  /* Yellow background color */
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#careers-carousel-2lines .career-card .btn-apply:hover {
+  background-color: #e0a100;
+  /* Darken the button on hover */
+}
+
 .career-card {
   background: #f9f9f9;
   border: 1px solid #ddd;
@@ -34,7 +66,7 @@
 .btn-apply {
   display: inline-block;
   margin-top: 10px;
-  background: #007bff;
+  background: #fdb417;
   color: #fff;
   padding: 8px 12px;
   border-radius: 4px;
@@ -42,29 +74,29 @@
 }
 
 .btn-apply:hover {
-  background: #0056b3;
+  background: #fdb417;
 }
 
-.owl-dots {
+/* Center the dots */
+.owl-carousel .owl-dots {
   text-align: center;
-  margin-top: 15px;
+  padding: 10px 0;
 }
 
-.owl-dots .owl-dot {
-  display: inline-block;
+/* Style the dots */
+.owl-carousel .owl-dot {
+  background-color: #fbe2d8 !important;
+  border-radius: 50%;
   width: 12px;
   height: 12px;
-  background: #ddd;
-  border-radius: 50%;
   margin: 0 5px;
-  cursor: pointer;
+  display: inline-block;
 }
 
-.owl-dots .owl-dot.active {
-  background: #007bff;
-  /* Highlight active dot */
+/* Style the active dot */
+.owl-carousel .owl-dot.active {
+  background-color: #fdb417 !important;
 }
-
 
 
 

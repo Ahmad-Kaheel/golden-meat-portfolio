@@ -199,7 +199,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-console.log("hello")
 
 //video
 document.addEventListener("DOMContentLoaded", function () {
@@ -329,19 +328,78 @@ function scrollToTop() {
 }
 
 
+// $(document).ready(function () {
+//   $('#careers-carousel-2lines').owlCarousel({
+//     loop: true,         // Enable looping
+//     margin: 10,         // Set margin between cards
+//     nav: true,          // Enable next/prev buttons
+//     responsive: {
+//       0: {
+//         items: 1         // 1 slide with 2 rows (6 cards) on small screens
+//       },
+//       600: {
+//         items: 1         // 1 slide with 2 rows (6 cards) on medium screens
+//       },
+//       1000: {
+//         items: 1         // 1 slide with 2 rows (6 cards) on large screens
+//       }
+//     },
+//     stagePadding: 10,    // Optional: Adds some space between slides
+//     slideBy: 1,          // Move 1 slide at a time
+//   });
+// });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  $('#careers-carousel-2lines').owlCarousel({
-    loop: true,
-    margin: 20,
-    dots: true, // Enable dots navigation
-    autoplay: true,
-    autoplayTimeout: 5000,
-    responsive: {
-      0: { items: 1 }, // Show 1 group per slide on small screens
-      768: { items: 1 }, // Show 1 group per slide on tablets
-      1024: { items: 1 }, // Show 1 group per slide on desktops
-    }
+//
+
+// $(document).ready(function () {
+//   $('#careers-carousel-2lines').owlCarousel({
+//     loop: true,
+//     margin: 10,
+//     dots: true, // Ensure this is set to true
+//     autoplay: true,
+//     autoplayTimeout: 5000,
+//     responsive: {
+//       0: { items: 1 },
+//       768: { items: 2 },
+//       1024: { items: 3 }
+//     }
+//   });
+// });
+
+// (function () {
+//   $('#careers-carousel-2lines').owlCarousel({
+//     loop: true,         // Enable looping
+//     margin: 10,         // Set margin between cards
+//     nav: true,          // Enable next/prev buttons
+//     navText: ['<span class="nav-arrow left-arrow">&#8592;</span>', '<span class="nav-arrow right-arrow">&#8594;</span>'],  // Custom arrows (optional)
+//     responsive: {
+//       0: {
+//         items: 1         // 1 slide with 2 rows (6 cards) on small screens
+//       },
+//       600: {
+//         items: 1         // 1 slide with 2 rows (6 cards) on medium screens
+//       },
+//       1000: {
+//         items: 1         // 1 slide with 2 rows (6 cards) on large screens
+//       }
+//     },
+//     stagePadding: 10,    // Optional: Adds some space between slides
+//     slideBy: 1,          // Move 1 slide at a time
+//   });
+// })();
+$(document).ready(function () {
+  $("#careers-carousel-2lines").owlCarousel({
+    items: 1,  // One item per slide
+    loop: true,  // Infinite loop
+    margin: 10,  // Space between items
+    nav: false,  // Disable arrows
+    dots: true,  // Enable dots navigation
+    autoplay: true,  // Enable autoplay
+    autoplayTimeout: 3000,  // 3 seconds for each slide
+    autoplayHoverPause: true  // Pause autoplay on hover
   });
 });
+
+
+console.log("hello")
