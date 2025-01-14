@@ -318,25 +318,3 @@ window.onscroll = function () {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
-
-//Careers first page 
-$(document).ready(function () {
-  $('#careers-carousel-2lines').owlCarousel({
-    loop: true,
-    margin: 20,
-    nav: true,
-    dots: false,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      768: {
-        items: 1,
-      },
-      1024: {
-        items: 1,
-      },
-    },
-  });
-});

@@ -12,55 +12,61 @@
 /*--------------------------------------------------------------
 #  Careers first page 
 --------------------------------------------------------------*/
-#careers-page-carousel .owl-item {
-  padding: 10px;
-}
-
-#careers-page-carousel .career-item {
-  display: flex;
-  justify-content: center;
-}
-
-#careers-page-carousel .career-card {
-  width: 100%;
-  max-width: 320px;
-  margin: auto;
+.career-card {
   background: #f9f9f9;
-  padding: 20px;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-#careers-page-carousel .career-card:hover {
-  transform: scale(1.05);
+.career-card h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-#careers-page-carousel .career-card h4 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
+.career-card p {
+  margin: 5px 0;
 }
 
-#careers-page-carousel .career-card p {
-  font-size: 14px;
-  color: #777;
-}
-
-#careers-page-carousel .career-card .btn-apply {
-  margin-top: 15px;
+.btn-apply {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #fdb417;
-  color: white;
-  text-decoration: none;
+  margin-top: 10px;
+  background: #007bff;
+  color: #fff;
+  padding: 8px 12px;
   border-radius: 4px;
-  transition: background-color 0.3s;
+  text-decoration: none;
 }
 
-#careers-page-carousel .career-card .btn-apply:hover {
-  background-color: #fdb417;
+.btn-apply:hover {
+  background: #0056b3;
 }
+
+.owl-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.owl-dots .owl-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.owl-dots .owl-dot.active {
+  background: #007bff;
+  /* Highlight active dot */
+}
+
+
+
 
 /*--------------------------------------------------------------
 #  first filter additional styles

@@ -4,6 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
 !(function ($) {
   "use strict";
 
@@ -159,38 +160,46 @@ document.querySelectorAll('.toggle-details').forEach(toggle => {
     }
   });
 });
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the carousel element
+  const myCarousel = document.querySelector('#heroCarousel');
 
-// Get all the custom indicator buttons
-const customIndicators = document.querySelectorAll('.custom-indicators button');
+  // Check if the carousel element exists
+  if (myCarousel) {
+    const carousel = new bootstrap.Carousel(myCarousel);
 
-// Get the carousel element
-const myCarousel = document.querySelector('#heroCarousel');
-const carousel = new bootstrap.Carousel(myCarousel);
+    // Get all the custom indicator buttons
+    const customIndicators = document.querySelectorAll('.custom-indicators button');
 
-// Add event listeners for each custom indicator button
-customIndicators.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    // Navigate to the corresponding slide
-    carousel.to(index);
+    // Add event listeners for each custom indicator button
+    customIndicators.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        // Navigate to the corresponding slide
+        carousel.to(index);
 
-    // Update the active class on the buttons
-    customIndicators.forEach((btn) => btn.classList.remove('active'));
-    button.classList.add('active');
-  });
+        // Update the active class on the buttons
+        customIndicators.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+
+    // Optionally, sync the active class on page load
+    myCarousel.addEventListener('slide.bs.carousel', (event) => {
+      const currentIndex = event.to; // The index of the new slide
+      customIndicators.forEach((button, index) => {
+        if (index === currentIndex) {
+          button.classList.add('active');
+        } else {
+          button.classList.remove('active');
+        }
+      });
+    });
+  } else {
+    console.error('Carousel element not found');
+  }
 });
 
-// Optionally, sync the active class on page load
-myCarousel.addEventListener('slide.bs.carousel', (event) => {
-  const currentIndex = event.to; // The index of the new slide
-  customIndicators.forEach((button, index) => {
-    if (index === currentIndex) {
-      button.classList.add('active');
-    } else {
-      button.classList.remove('active');
-    }
-  });
-});
-
+console.log("hello")
 
 //video
 document.addEventListener("DOMContentLoaded", function () {
@@ -320,23 +329,19 @@ function scrollToTop() {
 }
 
 
-//Careers first page 
-$(document).ready(function () {
+
+
+document.addEventListener('DOMContentLoaded', function () {
   $('#careers-carousel-2lines').owlCarousel({
     loop: true,
     margin: 20,
-    nav: true,
-    dots: false,
+    dots: true, // Enable dots navigation
+    autoplay: true,
+    autoplayTimeout: 5000,
     responsive: {
-      0: {
-        items: 1,
-      },
-      768: {
-        items: 1,
-      },
-      1024: {
-        items: 1,
-      },
-    },
+      0: { items: 1 }, // Show 1 group per slide on small screens
+      768: { items: 1 }, // Show 1 group per slide on tablets
+      1024: { items: 1 }, // Show 1 group per slide on desktops
+    }
   });
 });
