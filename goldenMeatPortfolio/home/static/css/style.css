@@ -10,6 +10,113 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+#  Job details page
+--------------------------------------------------------------*/
+.job-details-page {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.job-full-card {
+  width: 100%;
+  background-color: #fdb417;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.job-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.job-details {
+  font-size: 16px;
+  color: #333;
+}
+
+.job-details p {
+  margin-bottom: 10px;
+}
+
+.job-description {
+  width: 75%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.job-description h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.send-cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fdb417;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.right-sidebar {
+  width: 25%;
+}
+
+.social-media {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #fdb417;
+}
+
+.job-details-info {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.job-details-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.preferred-candidate {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.preferred-candidate h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.preferred-candidate p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
 #  Jobs page
 --------------------------------------------------------------*/
 /* Add padding and styling for the search button */

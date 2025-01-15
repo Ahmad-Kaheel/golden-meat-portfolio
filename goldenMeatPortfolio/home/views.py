@@ -104,3 +104,6 @@ def careers(request):
 def job_list(request):
     # jobs = Job.objects.all()  # Fetch all jobs, apply filters if necessary
     return render(request, 'home/jobs.html')
+
+def job_details(request):
+    return render(request, 'home/job_details.html')
