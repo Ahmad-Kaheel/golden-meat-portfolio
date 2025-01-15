@@ -10,8 +10,191 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+#  Jobs page
+--------------------------------------------------------------*/
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.search-button {
+  padding: 10px 15px;
+  background-color: #fdb417;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #f8a900;
+}
+
+/* Layout for job cards and filters */
+.jobs-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  width: 25%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-toggle {
+  background-color: #fdb417;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-toggle:hover {
+  background-color: #f8a900;
+}
+
+.filter-options {
+  display: none;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.filter-options input {
+  margin-right: 5px;
+}
+
+.job-cards {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.job-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.job-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.job-location,
+.job-role,
+.job-industry,
+.job-status {
+  font-size: 14px;
+  color: #777;
+}
+
+.view-details {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fdb417;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.view-details:hover {
+  background-color: #f8a900;
+}
+
+/* Collapse/Expand filter sections */
+.filter-toggle.active+.filter-options {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .jobs-container {
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .job-cards {
+    width: 100%;
+  }
+}
+
+/*--------------------------------------------------------------
 #  Careers first page 
 --------------------------------------------------------------*/
+/* Wrapper for both cards to stay in the same row */
+.career-cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Styling for both cards */
+.career-card.cv-card {
+  background: #fdb417;
+  /* Set background color to #fdb417 */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 48%;
+  text-decoration: none;
+}
+
+.career-card.cv-card:hover {
+  transform: scale(1.05);
+}
+
+.cv-icon-container i {
+  font-size: 50px;
+  color: white;
+  /* Set the icon color to white */
+}
+
+.cv-description {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Remove the arrow circle */
+.arrow-circle {
+  display: none;
+  /* Ensure it's not displayed */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .cv-card {
+    width: 100%;
+    /* Stack cards on small screens */
+  }
+}
+
 #careers-carousel-2lines .career-card h4 {
   font-size: 20px;
   font-weight: 600;
