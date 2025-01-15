@@ -99,3 +99,8 @@ def products_filter(request):
 
 def careers(request):
     return render(request, 'home/careers.html')
+
+
+def job_list(request):
+    # jobs = Job.objects.all()  # Fetch all jobs, apply filters if necessary
+    return render(request, 'home/jobs.html')

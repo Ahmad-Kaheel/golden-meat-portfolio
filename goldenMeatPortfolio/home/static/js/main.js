@@ -327,67 +327,6 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-
-// $(document).ready(function () {
-//   $('#careers-carousel-2lines').owlCarousel({
-//     loop: true,         // Enable looping
-//     margin: 10,         // Set margin between cards
-//     nav: true,          // Enable next/prev buttons
-//     responsive: {
-//       0: {
-//         items: 1         // 1 slide with 2 rows (6 cards) on small screens
-//       },
-//       600: {
-//         items: 1         // 1 slide with 2 rows (6 cards) on medium screens
-//       },
-//       1000: {
-//         items: 1         // 1 slide with 2 rows (6 cards) on large screens
-//       }
-//     },
-//     stagePadding: 10,    // Optional: Adds some space between slides
-//     slideBy: 1,          // Move 1 slide at a time
-//   });
-// });
-
-
-//
-
-// $(document).ready(function () {
-//   $('#careers-carousel-2lines').owlCarousel({
-//     loop: true,
-//     margin: 10,
-//     dots: true, // Ensure this is set to true
-//     autoplay: true,
-//     autoplayTimeout: 5000,
-//     responsive: {
-//       0: { items: 1 },
-//       768: { items: 2 },
-//       1024: { items: 3 }
-//     }
-//   });
-// });
-
-// (function () {
-//   $('#careers-carousel-2lines').owlCarousel({
-//     loop: true,         // Enable looping
-//     margin: 10,         // Set margin between cards
-//     nav: true,          // Enable next/prev buttons
-//     navText: ['<span class="nav-arrow left-arrow">&#8592;</span>', '<span class="nav-arrow right-arrow">&#8594;</span>'],  // Custom arrows (optional)
-//     responsive: {
-//       0: {
-//         items: 1         // 1 slide with 2 rows (6 cards) on small screens
-//       },
-//       600: {
-//         items: 1         // 1 slide with 2 rows (6 cards) on medium screens
-//       },
-//       1000: {
-//         items: 1         // 1 slide with 2 rows (6 cards) on large screens
-//       }
-//     },
-//     stagePadding: 10,    // Optional: Adds some space between slides
-//     slideBy: 1,          // Move 1 slide at a time
-//   });
-// })();
 $(document).ready(function () {
   $("#careers-carousel-2lines").owlCarousel({
     items: 1,  // One item per slide
@@ -401,5 +340,21 @@ $(document).ready(function () {
   });
 });
 
+// Filter Toggles
+document.addEventListener('DOMContentLoaded', function () {
+  const filterToggles = document.querySelectorAll('.filter-toggle');
+
+  filterToggles.forEach(toggle => {
+    toggle.addEventListener('click', function () {
+      this.classList.toggle('active');
+      const filterOptions = this.nextElementSibling;
+      if (filterOptions.style.display === 'block') {
+        filterOptions.style.display = 'none';
+      } else {
+        filterOptions.style.display = 'block';
+      }
+    });
+  });
+});
 
 console.log("hello")

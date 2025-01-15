@@ -8,7 +8,7 @@
   <div class="container">
     <div class="career-cards-wrapper">
       <!-- Send CV Card -->
-      <a href="mailto:recruiter@example.com?subject=CV%20Submission&body=Please%20find%20my%20CV%20attached." class="career-card cv-card">
+      <a href="mailto:hr@goldenmeat.com?subject=CV%20Submission" class="career-card cv-card">
         <div class="cv-icon-container">
           <i class="fas fa-file-upload"></i>
         </div>
@@ -18,7 +18,7 @@
       </a>
 
       <!-- Searching Job Card -->
-      <a href="mailto:recruiter@example.com?subject=Job%20Inquiry&body=I%20am%20looking%20for%20job%20opportunities." class="career-card cv-card">
+      <a href="{% url 'job_list' %}" class="career-card cv-card">
         <div class="cv-icon-container">
           <i class="fas fa-search"></i>
         </div>
@@ -151,7 +151,7 @@
 
     <!-- More Jobs Button -->
     <div class="more-about-btn">
-      <a href="#more-jobs" class="btn-more-about">All jobs</a>
+      <a href="{% url 'job_list' %}"  class="btn-more-about">All jobs</a>
     </div>
 
   </div>

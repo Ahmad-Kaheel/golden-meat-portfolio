@@ -12,6 +12,7 @@
 /*--------------------------------------------------------------
 #  Jobs page
 --------------------------------------------------------------*/
+/* Styling for the search engine at the top */
 .search-container {
   display: flex;
   justify-content: space-between;
@@ -43,6 +44,8 @@
 .jobs-container {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+  /* Add space between the filter sidebar and job cards */
 }
 
 .filters {
@@ -81,11 +84,10 @@
   margin-right: 5px;
 }
 
+/* Job Cards Layout (List Style) */
 .job-cards {
   width: 70%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  /* Adjust the width of job cards section */
 }
 
 .job-card {
@@ -93,6 +95,8 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  /* Add margin between each card */
 }
 
 .job-title {
