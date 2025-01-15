@@ -340,21 +340,5 @@ $(document).ready(function () {
   });
 });
 
-// Filter Toggles
-document.addEventListener('DOMContentLoaded', function () {
-  const filterToggles = document.querySelectorAll('.filter-toggle');
-
-  filterToggles.forEach(toggle => {
-    toggle.addEventListener('click', function () {
-      this.classList.toggle('active');
-      const filterOptions = this.nextElementSibling;
-      if (filterOptions.style.display === 'block') {
-        filterOptions.style.display = 'none';
-      } else {
-        filterOptions.style.display = 'block';
-      }
-    });
-  });
-});
 
 console.log("hello")

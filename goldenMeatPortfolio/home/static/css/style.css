@@ -46,9 +46,16 @@
 /* Filter Sidebar Icons */
 .filter-toggle i {
   margin-right: 10px;
-  /* Space between icon and filter title */
+  font-size: 18px;
   color: #fdb417;
 }
+
+.filter-toggle:hover i {
+  color: #ffffff;
+}
+
+
+
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
@@ -105,25 +112,39 @@
 }
 
 .filters {
-  width: 25%;
-  background-color: #f4f4f4;
+  background: #ffffff;
   padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
 }
 
 .filter-group {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .filter-toggle {
-  background-color: #fdb417;
-  color: white;
-  padding: 10px;
-  width: 100%;
-  text-align: left;
+  border-radius: 8px;
+  background: none;
   border: none;
-  border-radius: 4px;
+  color: #333;
+  /* Dark color for text */
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   cursor: pointer;
+  padding: 10px;
+}
+
+.toggle-arrow {
+  transition: transform 0.3s ease;
+  /* Smooth rotation */
+  font-size: 16px;
+  color: white;
 }
 
 .filter-toggle:hover {
@@ -132,8 +153,29 @@
 
 .filter-options {
   display: none;
-  margin-top: 10px;
   padding-left: 20px;
+  margin-top: 10px;
+}
+
+.filter-group.open .filter-options {
+  display: block;
+}
+
+.filter-group.open .toggle-arrow {
+  transform: rotate(180deg);
+}
+
+.filter-options label {
+  color: #333;
+  /* Dark color for labels */
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .filter-options input {
