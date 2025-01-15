@@ -12,6 +12,61 @@
 /*--------------------------------------------------------------
 #  Jobs page
 --------------------------------------------------------------*/
+/* Add padding and styling for the search button */
+.search-button i {
+  margin-right: 8px;
+  /* Space between icon and text */
+}
+
+/* Job Card Styles with icons */
+.job-card .job-title i,
+.job-card .job-location i,
+.job-card .job-role i,
+.job-card .job-industry i,
+.job-card .job-status i {
+  margin-right: 8px;
+  /* Space between icon and text */
+  color: #fdb417;
+  /* Use the yellow color for icons */
+}
+
+.job-card .job-title i {
+  font-size: 20px;
+  /* Increase icon size in the title */
+}
+
+.job-card .job-location i,
+.job-card .job-role i,
+.job-card .job-industry i,
+.job-card .job-status i {
+  font-size: 16px;
+  /* Adjust icon size */
+}
+
+/* Filter Sidebar Icons */
+.filter-toggle i {
+  margin-right: 10px;
+  /* Space between icon and filter title */
+  color: #fdb417;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filters {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .job-cards {
+    width: 100%;
+  }
+}
 
 /* Styling for the search engine at the top */
 .search-container {
@@ -21,7 +76,7 @@
 }
 
 .search-input {
-  width: 80%;
+  width: 90%;
   padding: 10px;
   font-size: 16px;
   border-radius: 4px;
