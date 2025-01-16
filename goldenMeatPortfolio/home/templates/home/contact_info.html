@@ -3,62 +3,39 @@
 
 {% block content %}
 <br><br><br><br><br>
-
 <section class="section-bg">
   <div class="container">
-    <h2>Our Branch Locations</h2>
-
+    <h2>Branches</h2>
 
     <!-- Map with Branch Locations -->
     <div class="map-container">
       <!-- Map Image -->
-      <img src="{% static 'img/maps.png' %}"  alt="Map" class="map-image">
-  
+      <img src="{% static 'img/maps.png' %}" alt="Map" class="map-image">
+
       <!-- Branch 1 Pin -->
-      <div class="pin" style="top: 31%;  left: 48.40%;" onclick="showBranchDetails(1)">
-          <i class="fas fa-map-pin"></i>
+      <div class="pin" id="pin-1" style="top: 31%; left: 48.40%;" onclick="showBranchDetails(1)">
+        <i class="fas fa-map-pin"></i>
       </div>
-  
+
       <!-- Branch 2 Pin -->
-      <div class="pin" style="top: 20%; left: 57.40%;" onclick="showBranchDetails(2)">
-          <i class="fas fa-map-pin"></i>
+      <div class="pin" id="pin-2" style="top: 20%; left: 57.40%;" onclick="showBranchDetails(2)">
+        <i class="fas fa-map-pin"></i>
       </div>
-  
+
       <!-- Branch 3 Pin -->
-      <div class="pin" style="top: 51%;  left: 28.40%;" onclick="showBranchDetails(3)">
-          <i class="fas fa-map-pin"></i>
+      <div class="pin" id="pin-3" style="top: 51%; left: 28.40%;" onclick="showBranchDetails(3)">
+        <i class="fas fa-map-pin"></i>
       </div>
-  </div>
+    </div>
 
     <!-- Branch Details Card -->
     <div id="branch-details-card" class="branch-details-card hidden">
       <div class="card-content">
-          <img src="" alt="Branch Photo" class="branch-photo">
-          <h4 class="branch-name"></h4>
-          <p class="branch-contact"></p>
-          <button class="directions-btn">Get Directions</button>
-      </div>
-  </div>
-
-    <div class="branch-info" id="branch2" style="display: none;">
-      <div class="card">
-        <img src="{% static 'images/branch2.jpg' %}" alt="Branch 2" class="branch-image">
-        <h3>Branch 2</h3>
-        <p>Location: City 2</p>
-        <p>Contact: +987654321</p>
-        <a href="https://www.google.com/maps" class="btn-directions" target="_blank">Get Directions</a>
-        <button onclick="closeBranchInfo('branch2')">Close</button>
-      </div>
-    </div>
-
-    <div class="branch-info" id="branch3" style="display: none;">
-      <div class="card">
-        <img src="{% static 'images/branch3.jpg' %}" alt="Branch 3" class="branch-image">
-        <h3>Branch 3</h3>
-        <p>Location: City 3</p>
-        <p>Contact: +112233445</p>
-        <a href="https://www.google.com/maps" class="btn-directions" target="_blank">Get Directions</a>
-        <button onclick="closeBranchInfo('branch3')">Close</button>
+        <button class="close-btn" onclick="closeBranchDetails()">×</button>
+        <img src="" alt="Branch Photo" class="branch-photo">
+        <h4 class="branch-name"></h4>
+        <p class="branch-contact"></p>
+        <a href="https://www.google.com/maps" target="_blank" class="directions-btn">Get Directions</a>
       </div>
     </div>
 
@@ -70,7 +47,7 @@
           <img src="{% static 'images/branch1.jpg' %}" alt="Branch 1">
           <p>Branch 1</p>
           <p>Location: City 1</p>
-          <p>Contact: +123456789</p>
+          <p>Contact: +966114133338</p>
           <a href="https://www.google.com/maps" target="_blank" class="btn-directions">Get Directions</a>
         </div>
       </div>
@@ -97,7 +74,7 @@
 
       <div class="col-3">
         <div class="card branch-card">
-          <img src="{% static 'images/branch4.jpg' %}" alt="Branch 4">
+          <img src="{% static 'img/whoweare/2.jpg' %}" alt="Branch 4">
           <p>Branch 4</p>
           <p>Location: City 4</p>
           <p>Contact: +998877665</p>
@@ -106,68 +83,29 @@
       </div>
     </div>
 
-    <!-- Business Hours -->
-    <div class="business-hours">
-      <h3>Our Business Hours</h3>
-      <ul>
-        <li>Sunday: 10:00AM - 07:00PM</li>
-        <li>Monday: 10:00AM - 07:00PM</li>
-        <li>Tuesday: 10:00AM - 07:00PM</li>
-        <li>Wednesday: 10:00AM - 07:00PM</li>
-        <li>Thursday: 10:00AM - 07:00PM</li>
-        <li>Friday: Closed</li>
-        <li>Saturday: 10:00AM - 07:00PM</li>
-      </ul>
-    </div>
-
-    <!-- Contact Form -->
-    <div class="contact-form">
-      <h3>Send Us a Message</h3>
-      <form action="mailto:{{ email }}" method="post" enctype="text/plain">
-        <label for="recipient">Choose Recipient:</label>
-        <select name="recipient" id="recipient">
-          <option value="sales">Sales</option>
-          <option value="purchase">Purchase</option>
-          <option value="info">Info</option>
-        </select>
-        
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit" class="send-message-btn">
-          <img src="{% static 'images/logo.png' %}" alt="Golden Meat Logo" class="logo"> Send Message
-        </button>
-      </form>
-
-      <p class="thank-you-message" style="display: none;">Thank you! The message has been sent and our team will contact you soon!</p>
-    </div>
-
   </div>
 </section>
 
 <script>
   const branches = {
     1: {
-        photo: 'path-to-branch-1-photo.jpg',
-        name: 'Branch 1 - Riyadh',
-        contact: 'Phone: +966 123 456 789',
+      photo: '{% static "img/whoweare/2.jpg" %} ',
+      name: 'Riyadh Branch',
+      contact: 'Phone: +966114133338',
     },
     2: {
-        photo: 'path-to-branch-2-photo.jpg',
-        name: 'Branch 2 - Jeddah',
-        contact: 'Phone: +966 987 654 321',
+      photo: '{% static "img/whoweare/2.jpg" %} ',
+      name: 'Dammam Branch',
+      contact: 'Phone: +966114133338',
     },
     3: {
-        photo: 'path-to-branch-3-photo.jpg',
-        name: 'Branch 3 - Dammam',
-        contact: 'Phone: +966 456 789 123',
+      photo: '{% static "img/whoweare/2.jpg" %} ',
+      name: 'Jeddah Branch',
+      contact: 'Phone: +966114133338',
     },
-};
+  };
 
-function showBranchDetails(branchId) {
+  function showBranchDetails(branchId) {
     const branch = branches[branchId];
     const card = document.getElementById('branch-details-card');
 
@@ -176,18 +114,24 @@ function showBranchDetails(branchId) {
     card.querySelector('.branch-name').textContent = branch.name;
     card.querySelector('.branch-contact').textContent = branch.contact;
 
-    // Position the card near the pin
-    const pin = document.querySelector(`.pin:nth-child(${branchId + 1})`);
+    // Position the card near the pin (to the left of the pin)
+    const pin = document.getElementById(`pin-${branchId}`);
     const rect = pin.getBoundingClientRect();
     card.style.top = `${rect.top + window.scrollY}px`;
-    card.style.left = `${rect.left + window.scrollX}px`;
+    card.style.left = `${rect.left + window.scrollX - card.offsetWidth - 10}px`; // Adjusted to open on the left
 
-    // Show the card
+    // Show the card with animation
     card.classList.remove('hidden');
-}
+    card.classList.add('show');
+  }
 
-
+  function closeBranchDetails() {
+    const card = document.getElementById('branch-details-card');
+    card.classList.remove('show');
+    card.classList.add('hidden');
+  }
 </script>
+
 
 {% endblock %}
 
