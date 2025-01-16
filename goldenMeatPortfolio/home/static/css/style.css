@@ -10,6 +10,205 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+#  Contact info page
+--------------------------------------------------------------*/
+.branch-details-card {
+  position: absolute;
+  width: 300px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 10;
+  transform: translate(-50%, -110%);
+}
+
+.branch-details-card.hidden {
+  display: none;
+}
+
+.branch-photo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.branch-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.branch-contact {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.directions-btn {
+  display: block;
+  width: 100%;
+  background-color: #fdb417;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.directions-btn:hover {
+  background-color: #e68900;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  /* Adjust as needed */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.map-pin {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pin {
+  position: absolute;
+  cursor: pointer;
+  color: #fdb417;
+  /* Pin color */
+  font-size: 30px;
+}
+
+.pin:hover {
+  color: #e68900;
+  /* Change pin color on hover */
+}
+
+/* Branch Info Pop-up */
+.branch-info {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  padding: 20px;
+  display: none;
+}
+
+.branch-info img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.branch-info .btn-directions {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fdb417;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Branch Information Cards */
+.branch-cards .branch-card {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.branch-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.branch-card .btn-directions {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fdb417;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Business Hours */
+.business-hours ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.business-hours li {
+  margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-form form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.send-message-btn {
+  background-color: #fdb417;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-message-btn .logo {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.thank-you-message {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/*--------------------------------------------------------------
 #  Job details page
 --------------------------------------------------------------*/
 .job-details-page {
