@@ -12,6 +12,146 @@
 /*--------------------------------------------------------------
 #  Contact info page
 --------------------------------------------------------------*/
+.equal-height {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  /* Ensures both cards have the same height */
+}
+
+.working-hours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Working Hours Styling */
+.working-hours li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.working-hours li::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 50%;
+  height: 1px;
+  background-color: #ddd;
+  z-index: 0;
+}
+
+.working-hours .day {
+  font-weight: bold;
+  color: #555;
+  background: white;
+  z-index: 1;
+  padding-right: 10px;
+}
+
+.working-hours .hours {
+  color: #333;
+  background: white;
+  z-index: 1;
+  padding-left: 10px;
+}
+
+.working-hours hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 5px 0;
+}
+
+/* Working hours and contact information */
+.info-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.info-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-section .row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-section .col {
+  flex: 1 1 calc(50% - 20px);
+  /* Two columns in one row */
+}
+
+.info-section .card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-section .card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.info-section .card-description {
+  margin-bottom: 15px;
+  color: #555;
+
+}
+
+.info-section .card-description2 {
+  margin-top: -40px;
+  margin-bottom: 15px;
+  color: #555;
+
+}
+
+.info-section .working-hours li {
+  list-style: none;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.info-section .contact-info .first-item {
+  margin-bottom: 45px;
+}
+
+.info-section .contact-info .second-item {
+  margin-bottom: 45px;
+}
+
+.info-section .contact-info .third-item {
+  margin-bottom: 45px;
+}
+
+.info-section .contact-info li {
+  list-style: none;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Icons Styling */
+.info-section .contact-info i {
+  color: #fdb417;
+  margin-right: 10px;
+  font-size: 16px;
+
+}
+
+
 
 .branch-details i {
   margin-right: 8px;
@@ -1894,7 +2034,7 @@ section {
   align-items: center;
   font-size: 16px;
   color: #333;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 .call-us-text {
