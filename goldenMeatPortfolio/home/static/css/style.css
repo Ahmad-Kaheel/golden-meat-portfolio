@@ -12,6 +12,119 @@
 /*--------------------------------------------------------------
 #  Contact info page
 --------------------------------------------------------------*/
+/* Container for the radio buttons */
+.recipient-radio {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Hide the default radio button */
+.recipient-radio-input {
+  display: none;
+}
+
+/* Style the custom radio button */
+.radio-custom {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddad52;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* The selected state for the radio button */
+.recipient-radio-input:checked+.radio-custom {
+  background-color: #ddad52;
+  border-color: #ddad52;
+}
+
+
+/* Style the labels next to the radio button */
+.radio-choice {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.radio-label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Hover effect on the radio button */
+.radio-choice:hover .radio-custom {
+  border-color: #9c7d39;
+  /* Lighter gold on hover */
+}
+
+.radio-choice:hover .radio-label {
+  color: #9c7d39;
+  /* Change text color on hover */
+}
+
+/* Add some spacing */
+.radio-choice {
+  margin-right: 20px;
+}
+
+.btn-send-msg {
+  background-color: transparent;
+  /* No background color */
+  border: 2px solid #ddad52;
+  /* Golden border color */
+  color: #ddad52;
+  /* Golden text color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  /* Rounded corners */
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Smooth transition on hover */
+}
+
+.btn-send-msg img {
+  margin-right: 8px;
+  /* Space between logo and text */
+}
+
+.btn-send-msg:hover {
+  background-color: #fdb417;
+  /* Golden background on hover */
+  color: #fff;
+  /* White text on hover */
+  border-color: #fdb417;
+  /* Keep golden border */
+}
+
+.btn-send-msg:focus {
+  outline: none;
+  /* Remove outline on focus */
+  box-shadow: 0 0 0 3px #ddad52;
+  /* Soft shadow around the button */
+}
+
+.arrow-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1rem;
+  color: #333;
+}
+
 .equal-height {
   display: flex;
   flex-direction: column;
@@ -330,46 +443,109 @@
   margin-bottom: 10px;
 }
 
-/* Contact Form */
-.contact-form form {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+#contact-form .section-bg {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.dropdown-menu {
+  padding: 10px 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 1200px;
+  /* Optional: Set a max-width for better readability on very wide screens */
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-control {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
+  border: 1px solid #ddd;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-.send-message-btn {
-  background-color: #fdb417;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+textarea {
+  resize: none;
+}
+
+.send-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ddad52;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
 }
 
-.send-message-btn .logo {
-  width: 20px;
+.send-btn:hover {
+  background-color: #c09b4a;
+}
+
+.send-btn img {
+  width: 24px;
+  height: 24px;
   margin-right: 10px;
 }
 
 .thank-you-message {
-  font-size: 16px;
-  color: #333;
-  font-weight: bold;
   margin-top: 20px;
+  font-size: 18px;
+  color: #28a745;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
 
 /*--------------------------------------------------------------
