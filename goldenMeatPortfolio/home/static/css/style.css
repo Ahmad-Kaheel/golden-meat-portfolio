@@ -377,9 +377,17 @@
 .pin {
   position: absolute;
   cursor: pointer;
-  color: #fdb417;
+  /* color: #fdb417; */
   /* Pin color */
-  font-size: 30px;
+  /* font-size: 30px; */
+  transform: translate(-50%, -100%);
+}
+
+.pin-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  pointer-events: none;
 }
 
 .pin:hover {
