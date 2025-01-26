@@ -107,3 +107,7 @@ def job_list(request):
 
 def job_details(request):
     return render(request, 'home/job_details.html')
+
+# Branches
+def branches(request):
+    return render(request, 'home/branches.html')

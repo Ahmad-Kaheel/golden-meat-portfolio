@@ -2502,7 +2502,7 @@ section {
   width: 100%;
   height: 100vh;
   background: #000;
-  border-bottom: 2px solid #fdb417;
+  /* border-bottom: 2px solid #fdb417; */
   /* margin: 72px 0 -72px 0; */
   overflow: hidden;
   /* Ensures the video doesn’t overflow out of the section */
@@ -2517,7 +2517,7 @@ section {
   font-weight: 700;
   line-height: 56px;
   color: #150700;
-  -webkit-text-stroke: 3px #fdb417;
+  -webkit-text-stroke: 1px #fdb417;
 }
 
 #heroCarousel h2 {
@@ -2526,7 +2526,7 @@ section {
   color: #150700;
   margin-bottom: 50px;
   font-size: 24px;
-  -webkit-text-stroke: 1px #fdb417;
+  -webkit-text-stroke: 0.3px #fdb417;
 }
 
 #heroCarousel .btn-get-started {

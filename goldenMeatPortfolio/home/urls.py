@@ -38,4 +38,7 @@ urlpatterns = [
     path('careers/', views.careers, name='careers'),
     path('jobs/', views.job_list, name='job_list'),
     path('job-details/', views.job_details, name='job_details'),
+    
+    # Branches
+    path('branches/', views.branches, name='branches'),
 ]
