@@ -1026,11 +1026,7 @@ textarea {
   transform: scale(1.05);
 }
 
-.cv-icon-container i {
-  font-size: 50px;
-  color: white;
-  /* Set the icon color to white */
-}
+
 
 .cv-description {
   font-size: 16px;
@@ -1213,6 +1209,22 @@ textarea {
   /* Gold on hover */
 }
 
+#portfolio-flters1 li:hover .filter-icon {
+  filter: saturate(100%) invert(83%) sepia(20%) saturate(5809%) hue-rotate(345deg) brightness(103%) contrast(101%);
+  color: #fdb417;
+  /* Gold on hover */
+}
+
+#portfolio-flters1 .icon-span:hover .filter-icon {
+  filter: saturate(100%) invert(83%) sepia(20%) saturate(5809%) hue-rotate(345deg) brightness(103%) contrast(101%);
+  /* Gold on hover */
+}
+
+
+#portfolio-flters1 .icon-span:hover p {
+  color: #fdb417;
+}
+
 /* Active/Selected Icon */
 #portfolio-flters .filter-active .filter-icon {
   filter: saturate(100%) invert(83%) sepia(20%) saturate(5809%) hue-rotate(345deg) brightness(103%) contrast(101%);
@@ -1224,8 +1236,23 @@ textarea {
   /* Gold text for active filter */
 }
 
+#portfolio-flters1 .filter-active {
+  color: #fdb417;
+  /* Gold text for active filter */
+}
+
+
 /* Text Below Icons */
 #portfolio-flters li p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Text Below Icons */
+#portfolio-flters1 li p {
   margin-top: 10px;
   font-size: 14px;
   font-weight: bold;
@@ -4403,7 +4430,7 @@ html body.vsc-initialized main section#portfolio.portfolio.col-lg-9 {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio #portfolio-flters1 a {
+.portfolio #portfolio-flters1 div {
   cursor: pointer;
   margin: 0 15px 15px 0;
   display: inline-block;
@@ -4421,7 +4448,7 @@ html body.vsc-initialized main section#portfolio.portfolio.col-lg-9 {
   color: #fdb417;
 }
 
-.portfolio #portfolio-flters1 a:hover,
+.portfolio #portfolio-flters1 p:hover,
 .portfolio #portfolio-flters1 a.filter-active {
   color: #fdb417;
 }

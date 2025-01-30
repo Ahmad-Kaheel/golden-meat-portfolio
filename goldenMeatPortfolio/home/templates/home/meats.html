@@ -22,31 +22,70 @@
         
             <div class="row" data-aos="fade-up" data-aos-delay="100">
               
-              </div>
-              <div class="col-lg-9">
-                <ul id="portfolio-flters1" >
-                  <a href="{% url 'meats' %}" class="filter-active">
-                    <div class="icon-container">
-                      <img src="{% static 'img/icons/all.svg' %}" class="filter-icon" alt="All Icon" />
-                    </div><br> Meats
-                  </a>
-                  <a href="{% url 'dairy' %}">
-                    <i class="fas fa-cheese"></i><br> Dairy
-                  </a>
-                  
-                  <a href="{% url 'oils' %}">
-                    <i class="fas fa-wine-bottle"></i><br> Oils
-                  </a>
-                  <a href="{% url 'others' %}">
-                    <i class="fas fa-ellipsis-h"></i><br> Others
-                  </a>
-                </ul>
-        
-        
-              </div>
-              
             </div>
-          </section>
+              <span class="icon-span">
+                <div class="col-lg-9">
+                  <ul id="portfolio-flters1" >
+                    <span class="icon-span">
+                      <a href="{% url 'meats' %}" >
+                        <li >
+                          <div class="icon-container">
+                            <img src="{% static 'img/icons/all.svg' %}" class="filter-icon" alt="All Icon" />
+                            <p>All</p>
+                          </div>
+                        </li>
+                      </a>
+                    </span>
+
+
+
+                    <span class="icon-span">
+                      <a href="{% url 'meats' %}" >
+                        <li >
+                          <div class="icon-container">
+                            <img src="{% static 'img/icons/2.svg' %}" class="filter-icon meat-icon" alt="All Icon" />
+                            <p>Meat</p>
+                          </div>
+                        </li>
+                      </a>
+                    </span>
+
+                    <span class="icon-span">
+                      <a href="{% url 'dairy' %}" >
+                        <li >
+                          <div class="icon-container">
+                            <img src="{% static 'img/icons/Dairy.svg' %}" class="filter-icon" alt="All Icon" />
+                            <p>Dairy</p>
+                          </div>
+                        </li>
+                      </a>
+                    </span>
+
+                    <span class="icon-span">
+                      <a href="{% url 'oils' %}">
+                        <li >
+                          <div class="icon-container">
+                            <img src="{% static 'img/icons/oils2.svg' %}" class="filter-icon" alt="All Icon" />
+                            <p>Oils</p>
+                          </div>
+                        </li>
+                      </a>
+                    </span>
+          
+                    <span class="icon-span">
+                      <a href="{% url 'others' %}">
+                        <li >
+                          <div class="icon-container">
+                            <img src="{% static 'img/icons/others.svg' %}" class="filter-icon" alt="All Icon" />
+                            <p>Others</p>
+                          </div>
+                        </li>
+                      </a>
+                    </span>
+              </ul>
+            </div>
+          </div>
+        </section>
         
         
         
@@ -92,6 +131,12 @@
                   <img src="{% static 'img/icons/duck.svg' %}" class="filter-icon" alt="Duck Icon" />
                 </div>
                 <p>Duck</p>
+              </li>
+              <li data-filter=".filter-others">
+                <div class="icon-container">
+                  <img src="{% static 'img/icons/ostrich.svg' %}" class="filter-icon" alt="Ostrich Icon" />
+                </div>
+                <p>Ostrich</p>
               </li>
             </ul>
           </div>
