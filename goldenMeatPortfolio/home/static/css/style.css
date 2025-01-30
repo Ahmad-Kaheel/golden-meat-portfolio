@@ -1160,13 +1160,13 @@ textarea {
 /*--------------------------------------------------------------
 #  Inner filter in products page 
 --------------------------------------------------------------*/
-.row.inner-filter {
+div .row.inner-filter {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: 220px;
+  /* margin-right: -15px; */
+  /* margin-left: 220px; */
 }
 
 /* General UL Styling */
@@ -1177,7 +1177,7 @@ textarea {
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 /* Styling for LI elements */
@@ -1241,6 +1241,9 @@ textarea {
   /* Gold text for active filter */
 }
 
+.meat-icon {
+  filter: saturate(100%) invert(83%) sepia(20%) saturate(5809%) hue-rotate(345deg) brightness(103%) contrast(101%);
+}
 
 /* Text Below Icons */
 #portfolio-flters li p {
@@ -4421,7 +4424,7 @@ html body.vsc-initialized main section#portfolio.portfolio.col-lg-9 {
   cursor: pointer;
   margin: 0 15px 15px 0;
   display: inline-block;
-  padding: 5px;
+  padding: 10px;
   font-size: 16px;
   font-weight: 600;
   /* line-height: 0px; */
