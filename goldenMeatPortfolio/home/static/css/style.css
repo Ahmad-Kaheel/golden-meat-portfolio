@@ -2748,6 +2748,8 @@ section {
   overflow: hidden;
   position: sticky;
   top: 200px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 
 #vertical-filter li {
