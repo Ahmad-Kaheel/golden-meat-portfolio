@@ -2737,6 +2737,7 @@ section {
 .col-lg-3.vertical-filter {
   /* padding-top: 0px; */
   margin-left: -30%;
+  margin-bottom: 1%;
 }
 
 #vertical-filter {
