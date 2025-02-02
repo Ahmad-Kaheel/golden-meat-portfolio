@@ -2731,18 +2731,23 @@ section {
   /* Align items at the top */
 }
 
+/* .vertical-filter {} */
+
+
 .col-lg-3.vertical-filter {
-  padding-top: 0px;
+  /* padding-top: 0px; */
   margin-left: -30%;
 }
 
 #vertical-filter {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 0;
   background: #f8f9fa;
   border-radius: 8px;
   overflow: hidden;
+  position: sticky;
+  top: 200px;
 }
 
 #vertical-filter li {
