@@ -2840,7 +2840,7 @@ section {
 
 .col-lg-3.vertical-filter {
   /* padding-top: 0px; */
-  margin-left: -30%;
+  margin-left: -300px;
   margin-bottom: 1%;
 }
 
@@ -4504,8 +4504,8 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-html body.vsc-initialized main section#portfolio.portfolio.col-lg-9 {
-  margin-left: 25% !important;
+html body.vsc-initialized main section#portfolio.portfolio.col-lg-12 {
+  margin-left: 7% !important;
 }
 
 #portfolio {
