@@ -10,6 +10,110 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+# Install our apps (in footer)
+--------------------------------------------------------------*/
+
+.app-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-links img {
+  width: 150px;
+  /* Adjust as needed */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.app-links img:hover {
+  transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
+#  Upload CV Modal
+--------------------------------------------------------------*/
+.modal-content-cv {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+#cvModal {
+  background-color: white;
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  display: none;
+}
+
+.cv-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: auto;
+}
+
+/* Modal Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Form Styles */
+.cv-modal-wrapper .modal-form input[type="file"],
+.cv-modal-wrapper .modal-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cv-modal-wrapper .modal-form .notice {
+  font-size: 12px;
+  color: #555;
+}
+
+.cv-modal-wrapper .modal-form .error {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+.cv-modal-wrapper .modal-form button {
+  padding: 10px 20px;
+  background-color: #fdb417;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cv-modal-wrapper .modal-form button:hover {
+  background-color: #9c7d39;
+}
+
+/*--------------------------------------------------------------
 #  Contact info page
 --------------------------------------------------------------*/
 /* Container for the radio buttons */
@@ -3295,10 +3399,16 @@ section {
 /*--------------------------------------------------------------
 #  Sustainability
 --------------------------------------------------------------*/
+.sustainability-goal {
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
 .sustainability-goal .col-lg-6 img {
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  /* margin-right: auto; */
   max-width: 100%;
 }
 
