@@ -10,6 +10,58 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+#  Social container in main page (index)
+--------------------------------------------------------------*/
+
+.instagram-container {
+  width: 340px;
+  /* Adjust width */
+  height: 630px;
+  /* Enforce height */
+  overflow: hidden;
+  /* Prevent content overflow */
+  display: flex;
+  justify-content: center;
+  /* Center content */
+  align-items: center;
+}
+
+
+.social-container {
+  display: flex;
+  gap: 20px;
+  /* Adds space between elements */
+  justify-content: center;
+  /* Centers the elements */
+  flex-wrap: wrap;
+  /* Wraps to a new line on smaller screens */
+  border-radius: 15px;
+}
+
+.social-container .instagram-container {
+  border-radius: 15px;
+  border: 3px solid #ddad52;
+
+}
+
+.social-container .facebook-frame {
+  border-radius: 15px;
+  max-width: 340px;
+  border: 3px solid #ddad52;
+}
+
+.social-container iframe,
+.social-container blockquote,
+.social-container a {
+  border-radius: 15px;
+  flex: 1;
+  max-width: 340px;
+  border: 3px solid #ddad52;
+
+  /* Prevents elements from becoming too wide */
+}
+
+/*--------------------------------------------------------------
 # Install our apps (in footer)
 --------------------------------------------------------------*/
 
