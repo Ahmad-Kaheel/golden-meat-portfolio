@@ -74,7 +74,7 @@
       <form id="contactForm" onsubmit="sendEmail(event)">
         <div class="form-group">
           <label class="form-label">Choose Recipient:</label>
-          <div class="recipient-radio">
+          <div class="recipient-radio" required>
             <label class="radio-choice">
               <input type="radio" name="recipient" value="Sales" id="sales" class="recipient-radio-input">
               <span class="radio-custom"></span>
@@ -95,15 +95,28 @@
           </div>
           
         </div>
-        
+
         <div class="form-group">
-          <label for="subject">Subject:</label>
-          <input type="text" id="subject" name="subject" class="form-control" required>
+          <input placeholder="Name" type="text" id="subject" name="subject" class="form-control" required>
         </div>
         
+        
+        
         <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+          <input placeholder="Email" type="text" id="subject" name="subject" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <input placeholder="Phone number" type="tel" id="subject" name="subject" 
+          class="form-control" required pattern="[0-9]+" 
+          onkeypress="return /[0-9]/i.test(event.key)">        </div>
+
+          <div class="form-group">
+            <input placeholder="Subject" type="text" id="subject" name="subject" class="form-control" required>
+          </div>
+          
+        <div class="form-group">
+          <textarea placeholder="Message (max 1000 charachter)" maxlength="1000" id="message" name="message" class="form-control" rows="4" required></textarea>
         </div>  
         
         <button type="submit" class="btn btn-send-msg">
@@ -122,6 +135,15 @@
 
 
 <script>
+  document.getElementById('phone').addEventListener('input', function (e) {
+    // Allow only numbers
+    this.value = this.value.replace(/[^0-9]/g, '');
+
+    // Move to the next field after 10 digits
+    if (this.value.length === 10) {
+        document.getElementById('nextField').focus();
+    }
+});
 
 // Update the recipient when a dropdown option is selected
 function setRecipient(recipientName, email) {
