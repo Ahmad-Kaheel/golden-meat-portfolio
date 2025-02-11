@@ -342,7 +342,11 @@
 /* Working hours and contact information */
 .info-section {
   padding: 20px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
+  background-image: url('../img/counter-bg-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .info-section .container {
