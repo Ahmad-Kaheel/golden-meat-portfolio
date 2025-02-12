@@ -1955,6 +1955,7 @@ section {
 }
 
 
+
 /* Adjust text */
 .client-item p {
   margin-top: 10px;
@@ -1984,6 +1985,8 @@ section {
 /* Gradual color change on hover */
 .icon-frame:hover i {
   color: #fff;
+  /* width: 140px;
+  height: 140px; */
 }
 
 /* Gradual solid fill on hover */
