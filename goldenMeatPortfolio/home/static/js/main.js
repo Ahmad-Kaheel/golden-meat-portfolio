@@ -270,7 +270,7 @@ $(document).ready(function () {
     dots: true, // Ensure this is set to true
     autoplay: true,
     autoplayHoverPause: true, // Pause on hover
-    autoplayTimeout: 5000,
+    autoplayTimeout: 1000,
     responsive: {
       0: { items: 1 },
       768: { items: 2 },
@@ -330,5 +330,16 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-
+$(document).ready(function () {
+  $("#careers-carousel-2lines").owlCarousel({
+    items: 1,  // One item per slide
+    loop: true,  // Infinite loop
+    margin: 10,  // Space between items
+    nav: false,  // Disable arrows
+    dots: true,  // Enable dots navigation
+    autoplay: true,  // Enable autoplay
+    autoplayTimeout: 1000,  // 1 seconds for each slide
+    autoplayHoverPause: true  // Pause autoplay on hover
+  });
+});
 console.log("hello")
