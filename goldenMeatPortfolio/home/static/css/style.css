@@ -9,6 +9,38 @@
 #  My styles
 --------------------------------------------------------------*/
 
+
+/*--------------------------------------------------------------
+#  Request for Supply of Goods on Credit
+--------------------------------------------------------------*/
+
+
+.form-title2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #333;
+}
+
+
+#Request-credit .section-bg {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+}
+
+.Request-credit {
+  width: 100%;
+  max-width: 1200px;
+  /* Optional: Set a max-width for better readability on very wide screens */
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
 /*--------------------------------------------------------------
 #  Social container in main page (index)
 --------------------------------------------------------------*/
